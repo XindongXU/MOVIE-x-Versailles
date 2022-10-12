@@ -920,11 +920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09d81569b94780458723cb8b5871cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 0}
-  placeToInstantiate: {fileID: 0}
-  isActive: 0
-  periode: 1
-  timer: 0
 --- !u!1001 &4542694595468807064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1052,22 +1047,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5571154326920452846, guid: bd596a35fec15de4a8eb45af5ed464a1, type: 3}
   m_PrefabInstance: {fileID: 4894854185069552125}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4894854185069552127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755994212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62c801d29ff6cbe4da47d2ec74a041a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls: []
-  TagFilter: Player
 --- !u!65 &4894854185069552131
 BoxCollider:
   m_ObjectHideFlags: 0
