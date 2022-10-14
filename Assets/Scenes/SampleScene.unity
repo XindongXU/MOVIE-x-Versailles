@@ -379,7 +379,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 699219097}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &532899395
 MonoBehaviour:
@@ -455,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699219097}
   - component: {fileID: 699219099}
-  - component: {fileID: 699219098}
+  - component: {fileID: 699219100}
   m_Layer: 0
   m_Name: Doors
   m_TagString: Untagged
@@ -475,12 +475,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1864406959}
   - {fileID: 532899394}
+  - {fileID: 1864406959}
   m_Father: {fileID: 1196340278}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &699219098
+--- !u!65 &699219099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699219096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04165839, y: 3.6470916, z: 1.8720107}
+  m_Center: {x: -6.322958, y: 1.0552667, z: -12.159522}
+--- !u!114 &699219100
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,13 +502,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 699219096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04a1b0174e314e748455500b6eeaaf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6aebfb19959ed42e1941c6d07515a8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1864406963}
+      - m_Target: {fileID: 532899395}
         m_TargetAssemblyTypeName: E_InstantiatorRotate, Assembly-CSharp
         m_MethodName: DoEffect
         m_Mode: 1
@@ -507,7 +520,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 532899395}
+      - m_Target: {fileID: 1864406963}
         m_TargetAssemblyTypeName: E_InstantiatorRotate, Assembly-CSharp
         m_MethodName: DoEffect
         m_Mode: 1
@@ -531,19 +544,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &699219099
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699219096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &980698910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 699219097}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1864406961
 MeshRenderer:
