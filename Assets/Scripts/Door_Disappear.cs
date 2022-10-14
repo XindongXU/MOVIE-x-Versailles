@@ -8,7 +8,7 @@ public class Door_Disappear : MonoBehaviour
     public GameObject door;
     public GameObject Statue;
     Vector3 v1 = new Vector3(0, 0.6799998f, 0); // the postion of "Normand" on the map
-    public bool open(GameObject Statue)
+    public bool Open(GameObject Statue)
     {
         if(v1 == Statue.transform.localPosition){
             return true;
@@ -33,7 +33,7 @@ public class Door_Disappear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (open(Statue) == true){
+        if (Open(Statue) == true){
             Destroy(door);
         }
 
