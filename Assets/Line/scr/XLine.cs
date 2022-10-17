@@ -4,7 +4,6 @@ using System.Collections;
 public class XLine : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
-<<<<<<< Updated upstream
 
 	public void DoEffect()
     {
@@ -14,11 +13,6 @@ public class XLine : MonoBehaviour {
     // Use this for initialization
     // Update is called once per frame
 
-=======
-    // Use this for initialization
-    // Update is called once per frame
-    public void DoEffect () {
->>>>>>> Stashed changes
 		RaycastHit hit;
 		Vector3 Sc;// Transformer la taille
 		Sc.x=0.5f;
@@ -39,5 +33,4 @@ public class XLine : MonoBehaviour {
 		Line.transform.localScale=Sc;
             
 	}
-	}
-
+}
