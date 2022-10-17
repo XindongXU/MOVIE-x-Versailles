@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Door_Disappear : MonoBehaviour
+public class Door_Open : MonoBehaviour
 {
     public GameObject Statue;
     Vector3 v1 = new Vector3(-1.91f, 0.8382025f, 29.14f); // the postion of "Normand" on the map
