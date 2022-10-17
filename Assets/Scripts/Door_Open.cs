@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.Events;
+
 
 public class Door_Open : MonoBehaviour
 {
@@ -15,25 +14,12 @@ public class Door_Open : MonoBehaviour
     public GameObject LeftDoorShaft;
     public GameObject RightDoorShaft;
     public GameObject Collider;
-    public UnityEvent EffectToDo;
-    public string TagFilter = "Player";
+    bool Door_open = false;
 
-    public void OnTriggerEnter(Collider other)
+   
+    public void Open()
     {
-        if (other.CompareTag(TagFilter))
-        {
-            print(this.name + " declench¨¦ par " + this.gameObject);
-            EffectToDo?.Invoke();
-        }
-        else
-        {
-            print(this.name + " a dt¨¦ une collision par un objet non autoris¨¦ seul les objets possant le tag : " + TagFilter + " sont autoris¨¦");
-        }
-    }
-
-    public bool Open()
-    {
-        return true;
+        Door_open = true;
     }
 
     
@@ -63,7 +49,7 @@ public class Door_Open : MonoBehaviour
             {
                 closed = false;
             }
-            if (Open() == true)
+            if (Door_open == true)
             {
                 Destroy(Collider);
 
