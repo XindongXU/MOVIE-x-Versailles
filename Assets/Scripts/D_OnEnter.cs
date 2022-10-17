@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class D_OnEnter : MonoBehaviour
 {
     public UnityEvent EffectToDo;
-    public string TagFilter = "Player";
+    public string TagFilter;
 
     public void OnTriggerEnter(Collider other)
     {
