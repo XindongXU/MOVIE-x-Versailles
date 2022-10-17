@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Events;
 
-public class Door_Disappear : MonoBehaviour
+public class Door_Open : MonoBehaviour
 {
-    public GameObject Statue;
-    Vector3 v1 = new Vector3(-1.91f, 0.8382025f, 29.14f); // the postion of "Normand" on the map
+    //public GameObject Statue;
+    //Vector3 v1 = new Vector3(-1.91f, 0.8382025f, 29.14f); // the postion of "Normand" on the map
     bool closed = true;
     public AudioSource music;
     public AudioClip Open_door;
@@ -15,17 +15,25 @@ public class Door_Disappear : MonoBehaviour
     public GameObject LeftDoorShaft;
     public GameObject RightDoorShaft;
     public GameObject Collider;
+    public UnityEvent EffectToDo;
+    public string TagFilter = "Player";
 
-    public bool Open(GameObject Statue)
+    public void OnTriggerEnter(Collider other)
     {
-        if(v1 == Statue.transform.localPosition){
-            return true;
+        if (other.CompareTag(TagFilter))
+        {
+            print(this.name + " declench¨¦ par " + this.gameObject);
+            EffectToDo?.Invoke();
         }
-        
         else
         {
-            return false;
+            print(this.name + " a dt¨¦ une collision par un objet non autoris¨¦ seul les objets possant le tag : " + TagFilter + " sont autoris¨¦");
         }
+    }
+
+    public bool Open()
+    {
+        return true;
     }
 
     
@@ -55,7 +63,7 @@ public class Door_Disappear : MonoBehaviour
             {
                 closed = false;
             }
-            if (Open(Statue) == true)
+            if (Open() == true)
             {
                 Destroy(Collider);
 
