@@ -5,9 +5,14 @@ public class XLine : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
 
+	public void DoEffect()
+    {
+    
+    
+
     // Use this for initialization
     // Update is called once per frame
-    void Update () {
+
 		RaycastHit hit;
 		Vector3 Sc;// Transformer la taille
 		Sc.x=0.5f;
