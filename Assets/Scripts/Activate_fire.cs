@@ -3,28 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class D_OnStay : MonoBehaviour
+public class Activate_fire : MonoBehaviour
 {
     //public UnityEvent EffectToDo;
     public string TagFilter = "Player";
     bool executed = false;
     float timer = 0;
     public ParticleSystem particleSystem;
+    int candle = 0;
 
     public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag(TagFilter))
         {
             print(this.name + " declenché par " + this.gameObject);
-
-            if (executed == false)
+            candle += 1;
+            if (candle == 3)
             {
-                timer += Time.deltaTime;
-                if (timer >= 3)
-                {
-                    executed = true;
-                    particleSystem.Play();
-                }
+                particleSystem.Play();
             }
         }
         else

@@ -6,7 +6,14 @@ TagManager:
   tags:
   - Cube
   - Statue
+<<<<<<< Updated upstream
   - Fire
+=======
+  - projectile
+  - FxTemporaire
+  - Diamand Vert
+  - Diamand Bleu
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
