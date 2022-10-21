@@ -45,7 +45,7 @@ public class Activate_fire : MonoBehaviour
         }
         else
         {
-            print(this.name + " a dté une collision par un objet non autorisé seul les objets possant le tag : " + TagFilter + " sont autorisé");
+            print(this.name + " a dté une collision par un objet non autorisé seul les objets possant le tag : candle sont autorisé");
         }
     }
 
