@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class Door_Open : MonoBehaviour
+public class Door_Open_laser : MonoBehaviour
 {
     //public GameObject Statue;
     //Vector3 v1 = new Vector3(-1.91f, 0.8382025f, 29.14f); // the postion of "Normand" on the map
