@@ -8,6 +8,7 @@ using Valve.VR.Extras;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public new ParticleSystem particleSystem;
 
     void Awake()
     {
@@ -18,9 +19,10 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "Cube1")
         {
-            Debug.Log("Cube was clicked");
+            Debug.Log("Cube1 was clicked");
+            particleSystem.Play();
         }
         else if (e.target.name == "Button")
         {
