@@ -1,0 +1,11 @@
+Model Information:
+* title:	Uniform button
+* source:	https://sketchfab.com/3d-models/uniform-button-b000adcc6acd4376bbab7ac01a40b16e
+* author:	andrey_R (https://sketchfab.com/andrey_R)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Uniform button" (https://sketchfab.com/3d-models/uniform-button-b000adcc6acd4376bbab7ac01a40b16e) by andrey_R (https://sketchfab.com/andrey_R) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

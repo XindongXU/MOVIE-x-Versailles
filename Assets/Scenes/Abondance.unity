@@ -2434,6 +2434,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 0d9f4e15d1ffdc247bbd46b3e4044a55, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 0d9f4e15d1ffdc247bbd46b3e4044a55, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 0d9f4e15d1ffdc247bbd46b3e4044a55, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d9f4e15d1ffdc247bbd46b3e4044a55, type: 3}
 --- !u!198 &2011069771 stripped
