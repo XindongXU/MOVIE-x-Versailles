@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4898277301389229916, guid: bd596a35fec15de4a8eb45af5ed464a1, type: 3}
       propertyPath: m_TagString
-      value: Fire
+      value: Fire1
       objectReference: {fileID: 0}
     - target: {fileID: 5571154326920452846, guid: bd596a35fec15de4a8eb45af5ed464a1, type: 3}
       propertyPath: m_RootOrder
@@ -324,6 +324,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &22520448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22520441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783750eec4c41da428b7651515146d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
 --- !u!1 &52381702
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4898277301389229916, guid: bd596a35fec15de4a8eb45af5ed464a1, type: 3}
       propertyPath: m_TagString
-      value: Fire
+      value: Fire2
       objectReference: {fileID: 0}
     - target: {fileID: 5571154326920452846, guid: bd596a35fec15de4a8eb45af5ed464a1, type: 3}
       propertyPath: m_RootOrder
@@ -954,6 +969,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &455696714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455696707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783750eec4c41da428b7651515146d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
 --- !u!1001 &554756729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1160,7 +1190,6 @@ MonoBehaviour:
   laserPointer: {fileID: 731931007}
   particleSystem: {fileID: 0}
   myLight: {fileID: 0}
-  myActivateLight: {fileID: 0}
 --- !u!114 &731931007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,6 +1476,21 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &1458796020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458796012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783750eec4c41da428b7651515146d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
 --- !u!1 &1640808868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,11 +1687,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7d138aa1e0723498be8e5b8a122b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TagFilter: Fire
-  executed: 0
-  timer: 0
+  TagFilter1: Fire1
+  TagFilter2: Fire2
+  TagFilter3: Fire
   particleSystem: {fileID: 75331085}
-  candle: 0
 --- !u!65 &1672388702
 BoxCollider:
   m_ObjectHideFlags: 0

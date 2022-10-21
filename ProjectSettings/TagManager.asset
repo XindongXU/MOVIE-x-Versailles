@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Cube
   - Statue
+  - Fire
+  - Fire1
+  - Fire2
   layers:
   - Default
   - TransparentFX
