@@ -19,6 +19,7 @@ public class Activate_fire : MonoBehaviour
     {
         if (candle1 == candle2 == candle3 == true)
         {
+            print("yes");
             particleSystem.Play();
         }
     }
