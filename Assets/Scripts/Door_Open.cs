@@ -14,6 +14,8 @@ public class Door_Open : MonoBehaviour
     public GameObject LeftDoorShaft;
     public GameObject RightDoorShaft;
     public GameObject Collider;
+
+
     bool Door_open = false;
 
    
@@ -41,24 +43,26 @@ public class Door_Open : MonoBehaviour
     void Update()
     {   if (closed)
         {
-            float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
-            float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
-            Debug.Log(LeftDoorShaftRotation);
-            Debug.Log(closed);
-            if ((LeftDoorShaftRotation >= 100) && (-180 <= RightDoorShaftRotation))
+            if (laser == true)
             {
-                closed = false;
-            }
-            if (Door_open == true)
-            {
-                Destroy(Collider);
+                float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
+                float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
+                Debug.Log(LeftDoorShaftRotation);
+                Debug.Log(closed);
+                if ((LeftDoorShaftRotation >= 100) && (-180 <= RightDoorShaftRotation))
+                {
+                    closed = false;
+                }
+                if (Door_open == true)
+                {
+                    Destroy(Collider);
 
-                music.clip = Open_door;
-                music.Play();
+                    music.clip = Open_door;
+                    music.Play();
 
                 
-                m_LeftDoor.OpenLeftDoorMethod();
-                m_RightDoor.OpenRightDoorMethod();
+                    m_LeftDoor.OpenLeftDoorMethod();
+                    m_RightDoor.OpenRightDoorMethod();
 
             }
 
@@ -70,3 +74,4 @@ public class Door_Open : MonoBehaviour
 
     }
 
+}

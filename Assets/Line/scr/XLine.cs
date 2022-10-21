@@ -5,6 +5,8 @@ public class XLine : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
 
+	bool laser = false;
+
 	public void DoEffect()
     {
     
@@ -31,6 +33,6 @@ public class XLine : MonoBehaviour {
 		}
 			
 		Line.transform.localScale=Sc;
-            
+        bool laser = true;
 	}
 }
