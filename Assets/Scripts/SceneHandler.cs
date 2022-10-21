@@ -9,12 +9,16 @@ public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
     public new ParticleSystem particleSystem;
+    public GameObject myLight;
+    private Light myActivateLight;
+
 
     void Awake()
     {
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
+        
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
@@ -23,6 +27,7 @@ public class SceneHandler : MonoBehaviour
         {
             Debug.Log("Cube1 was clicked");
             particleSystem.Play();
+            myActivateLight.enabled = true;
         }
         else if (e.target.name == "Button")
         {
@@ -57,7 +62,8 @@ public class SceneHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        myActivateLight = myLight.GetComponent<Light>();
+        myActivateLight.enabled= false;
     }
 
     // Update is called once per frame
