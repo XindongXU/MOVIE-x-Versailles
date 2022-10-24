@@ -19,10 +19,10 @@ public class Show_letter : MonoBehaviour
         {
             print(this.name + " declench¨¦ par " + this.gameObject);
             time += Time.deltaTime;
-            print(time);
+            //print(time);
             if (time > 3)
             {
-                print("yes");
+                //print("yes");
                 EffectToDo?.Invoke();
             }
         }
