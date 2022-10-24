@@ -317,6 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189529507}
   - component: {fileID: 189529509}
+  - component: {fileID: 189529510}
   - component: {fileID: 189529508}
   m_Layer: 0
   m_Name: Doors (1)
@@ -350,7 +351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189529506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d2e8bef70ca1aa45873347b38beb16b, type: 3}
   m_Name: 
@@ -411,6 +412,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &189529510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189529506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line: {fileID: 452025573}
+  FXef: {fileID: 1090396538}
+  music: {fileID: 0}
+  Open_door: {fileID: 0}
+  LeftDoorShaft: {fileID: 0}
+  RightDoorShaft: {fileID: 0}
+  Collider: {fileID: 0}
 --- !u!1 &214022024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,6 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577926545}
   - component: {fileID: 577926547}
+  - component: {fileID: 577926551}
   - component: {fileID: 577926549}
   - component: {fileID: 577926548}
   - component: {fileID: 577926546}
@@ -1134,8 +1155,8 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 577926549}
-        m_TargetAssemblyTypeName: XLine, Assembly-CSharp
+      - m_Target: {fileID: 577926551}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
         m_MethodName: DoEffect
         m_Mode: 1
         m_Arguments:
@@ -1173,6 +1194,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.012339343, z: 0.020000005}
   m_Center: {x: 0.00000023841858, y: -0.00000047683716, z: -0.00000011920929}
+--- !u!114 &577926551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577926544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line: {fileID: 452025573}
+  FXef: {fileID: 1090396538}
+  music: {fileID: 0}
+  Open_door: {fileID: 0}
+  LeftDoorShaft: {fileID: 0}
+  RightDoorShaft: {fileID: 0}
+  Collider: {fileID: 0}
 --- !u!1 &667261458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678022131}
   - component: {fileID: 678022133}
+  - component: {fileID: 678022137}
   - component: {fileID: 678022135}
   - component: {fileID: 678022134}
   - component: {fileID: 678022132}
@@ -1358,8 +1399,8 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 678022135}
-        m_TargetAssemblyTypeName: XLine, Assembly-CSharp
+      - m_Target: {fileID: 678022137}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
         m_MethodName: DoEffect
         m_Mode: 1
         m_Arguments:
@@ -1397,6 +1438,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.012339343, z: 0.020000007}
   m_Center: {x: 0.00000047683716, y: 0.00000047683716, z: 0}
+--- !u!114 &678022137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678022130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line: {fileID: 1741834690}
+  FXef: {fileID: 1752391367}
+  music: {fileID: 0}
+  Open_door: {fileID: 0}
+  LeftDoorShaft: {fileID: 0}
+  RightDoorShaft: {fileID: 0}
+  Collider: {fileID: 0}
 --- !u!1 &685286640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,6 +2174,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084697639}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1090396538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: b87b996291e47ad40a4a4c074f772d6e, type: 3}
+  m_PrefabInstance: {fileID: 452025570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1150977227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 856ce4f5aa9be46d29f0d8883f5d74d1, type: 3}
@@ -2595,8 +2660,8 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 189529508}
-        m_TargetAssemblyTypeName: Door_Open, Assembly-CSharp
+      - m_Target: {fileID: 189529510}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
         m_MethodName: Open
         m_Mode: 1
         m_Arguments:
@@ -2982,6 +3047,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6403049, y: 0.509677, z: 0.7481842}
   m_Center: {x: 1.1831474, y: -0.0052084923, z: -17.086496}
+--- !u!1 &1752391367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: b87b996291e47ad40a4a4c074f772d6e, type: 3}
+  m_PrefabInstance: {fileID: 1741834687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1797602201
 GameObject:
   m_ObjectHideFlags: 0
