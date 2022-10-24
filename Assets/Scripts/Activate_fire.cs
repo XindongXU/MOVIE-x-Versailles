@@ -30,18 +30,21 @@ public class Activate_fire : MonoBehaviour
         {
             print(this.name + " declenché par " + this.gameObject);
             candle1 = true;
+            print(TagFilter1 + candle1);
             Activate();
         }
         else if(other.CompareTag(TagFilter2))
         {
             print(this.name + " declenché par " + this.gameObject);
             candle2 = true;
+            print(TagFilter2 + candle2);
             Activate();
         }
         else if (other.CompareTag(TagFilter3))
         {
             print(this.name + " declenché par " + this.gameObject);
             candle3 = true;
+            print(TagFilter3 + candle3);
             Activate();
         }
         else
