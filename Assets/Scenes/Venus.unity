@@ -2428,6 +2428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1353057547}
   - component: {fileID: 1353057548}
+  - component: {fileID: 1353057549}
   m_Layer: 0
   m_Name: LeftDoorShaft_abondance
   m_TagString: Untagged
@@ -2464,6 +2465,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorShaft: {fileID: 1353057546}
+--- !u!65 &1353057549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353057546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1391153826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,6 +2882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674775300}
   - component: {fileID: 1674775301}
+  - component: {fileID: 1674775302}
   m_Layer: 0
   m_Name: RightDoorShaft_abondance
   m_TagString: Untagged
@@ -2904,6 +2919,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorShaft: {fileID: 1674775299}
+--- !u!65 &1674775302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674775299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1723461117
 GameObject:
   m_ObjectHideFlags: 0
