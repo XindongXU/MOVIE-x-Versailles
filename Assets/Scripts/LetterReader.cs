@@ -21,7 +21,7 @@ public class LetterReader : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Plane_Lettre" && _noteImage.enabled == true)
+        if (e.target.name == "BackButton" && _noteImage.enabled == true)
         {
             Debug.Log("Lettre was clicked");
             _noteImage.enabled = false;
@@ -41,7 +41,7 @@ public class LetterReader : MonoBehaviour
         {
             Debug.Log("Cube was entered");
         }
-        else if (e.target.name == "Button")
+        else if (e.target.name == "BackButton")
         {
             Debug.Log("Button was entered");
         }
@@ -53,7 +53,7 @@ public class LetterReader : MonoBehaviour
         {
             Debug.Log("Cube was exited");
         }
-        else if (e.target.name == "Button")
+        else if (e.target.name == "BackButton")
         {
             Debug.Log("Button was exited");
         }
