@@ -9,6 +9,11 @@ TagManager:
   - Fire
   - Fire1
   - Fire2
+  - Diamand Vert
+  - Diamand Bleu
+  - Letter
+  - projectile
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
