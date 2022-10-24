@@ -16,11 +16,18 @@ public class LetterReader : MonoBehaviour
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
+
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Plane")
+        if (e.target.name == "Plane_Lettre" && _noteImage.enabled == true)
+        {
+            Debug.Log("Lettre was clicked");
+            _noteImage.enabled = false;
+
+        }
+        else if (e.target.name == "Plane_Lettre" && _noteImage.enabled == false)
         {
             Debug.Log("Plane was clicked");
             _noteImage.enabled = true;
