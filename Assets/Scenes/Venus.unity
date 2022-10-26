@@ -212,7 +212,8 @@ Transform:
   m_LocalPosition: {x: -11.348729, y: 0.9555898, z: -5.2198277}
   m_LocalScale: {x: 0.030570729, y: 0.26577726, z: 0.39253443}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2004063079}
   m_Father: {fileID: 1723461118}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -306,7 +307,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  TagFilter: Diamand Bleu
+  TagFilter: DiamandBleu
 --- !u!1 &189529506
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,10 +428,12 @@ MonoBehaviour:
   Line: {fileID: 452025573}
   FXef: {fileID: 1090396538}
   music: {fileID: 0}
-  Open_door: {fileID: 0}
-  LeftDoorShaft: {fileID: 0}
-  RightDoorShaft: {fileID: 0}
-  Collider: {fileID: 0}
+  Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
+  LeftDoorShaft: {fileID: 1353057546}
+  RightDoorShaft: {fileID: 1674775299}
+  Collider: {fileID: 1797602201}
+  Door_open_green: 0
+  Door_open_blue: 0
 --- !u!1 &214022024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1449,8 @@ MonoBehaviour:
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
+  Door_open_green: 0
+  Door_open_blue: 0
 --- !u!114 &577926552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,8 +1467,8 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 577926549}
-        m_TargetAssemblyTypeName: XLine, Assembly-CSharp
+      - m_Target: {fileID: 577926551}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
         m_MethodName: DoEffect
         m_Mode: 1
         m_Arguments:
@@ -1485,9 +1490,9 @@ GameObject:
   - component: {fileID: 678022131}
   - component: {fileID: 678022133}
   - component: {fileID: 678022137}
-  - component: {fileID: 678022139}
   - component: {fileID: 678022135}
   - component: {fileID: 678022132}
+  - component: {fileID: 678022139}
   - component: {fileID: 678022136}
   m_Layer: 0
   m_Name: DiamandBleu1
@@ -1607,6 +1612,8 @@ MonoBehaviour:
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
+  Door_open_green: 0
+  Door_open_blue: 0
 --- !u!114 &678022139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,18 +1632,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 678022137}
         m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
-        m_MethodName: DoEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 678022135}
-        m_TargetAssemblyTypeName: XLine, Assembly-CSharp
         m_MethodName: DoEffect
         m_Mode: 1
         m_Arguments:
@@ -3303,6 +3298,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391153826}
   m_Mesh: {fileID: 118058220143195079, guid: 6a57896c4381bd64bbb09c002908545e, type: 3}
+--- !u!1 &1423900691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423900692}
+  - component: {fileID: 1423900694}
+  - component: {fileID: 1423900693}
+  m_Layer: 0
+  m_Name: collidertriger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1423900692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423900691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1520251515}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423900693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423900691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c801d29ff6cbe4da47d2ec74a041a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectToDo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 189529510}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
+        m_MethodName: Open_green
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TagFilter: Diamand Vert
+--- !u!65 &1423900694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423900691}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7604754, y: 1, z: 0.9999998}
+  m_Center: {x: -0.38023755, y: -3.1117227e-12, z: 2.3269267e-11}
 --- !u!1 &1516713091
 GameObject:
   m_ObjectHideFlags: 0
@@ -3432,7 +3501,8 @@ Transform:
   m_LocalPosition: {x: -11.372829, y: 0.9374889, z: -8.953968}
   m_LocalScale: {x: 0.030570734, y: 0.26577717, z: 0.39253443}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1423900692}
   m_Father: {fileID: 1723461118}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3447,8 +3517,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9666586, y: 1, z: 0.9999998}
+  m_Center: {x: 0.016670503, y: 1.6490471e-13, z: -8.611412e-13}
 --- !u!23 &1520251517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3506,7 +3576,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520251514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62c801d29ff6cbe4da47d2ec74a041a1, type: 3}
   m_Name: 
@@ -3526,7 +3596,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  TagFilter: Diamand Vert
+  TagFilter: DiamandVert
 --- !u!54 &1572150697
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4111,6 +4181,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.640305, y: 0.509677, z: 0.7481842}
   m_Center: {x: 1.1756095, y: -0.018985502, z: -18.62244}
+--- !u!1 &2004063078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004063079}
+  - component: {fileID: 2004063081}
+  - component: {fileID: 2004063080}
+  m_Layer: 0
+  m_Name: colidertrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004063079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004063078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 184455892}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004063080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004063078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c801d29ff6cbe4da47d2ec74a041a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectToDo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 189529510}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
+        m_MethodName: Open_blue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TagFilter: Diamand Bleu
+--- !u!65 &2004063081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004063078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4314957, y: 1, z: 0.9999998}
+  m_Center: {x: -0.71574897, y: -1.8343666e-12, z: -8.251262e-11}
 --- !u!1 &2041422634
 GameObject:
   m_ObjectHideFlags: 0

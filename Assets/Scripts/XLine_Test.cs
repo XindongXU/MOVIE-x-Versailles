@@ -19,9 +19,10 @@ public class XLine_Test : MonoBehaviour {
     public GameObject RightDoorShaft;
     public GameObject Collider;
 
-    bool Door_open = false;
+    public bool Door_open_green = false;
+    public bool Door_open_blue = false;
 
-	public void DoEffect()
+    public void DoEffect()
     {
     
     
@@ -50,10 +51,15 @@ public class XLine_Test : MonoBehaviour {
         bool laser = true;
 	}
 
-   
-    public void Open()
+
+    public void Open_green()
     {
-        Door_open = true;
+        Door_open_green = true;
+    }
+
+    public void Open_blue()
+    {
+        Door_open_blue = true;
     }
 
     
@@ -83,7 +89,7 @@ public class XLine_Test : MonoBehaviour {
             {
                 closed = false;
             }
-            if (Door_open == true)
+            if (Door_open_green == true & Door_open_blue == true)
             {
                 Destroy(Collider);
 
