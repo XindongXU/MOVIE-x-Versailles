@@ -58,7 +58,7 @@ public class XLine_Test : MonoBehaviour {
     }
     void Update()
     {
-        if (i%16==2)
+        if (i%18==1)
         {
             Position_Statues = true;
         }
