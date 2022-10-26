@@ -40,8 +40,16 @@ public class CountDownTimer : MonoBehaviour
         _GOImage.enabled = true;
 
     }
+
+    private void Update(){
+
+    }
+
 }
 
+
+
+// public class CountdownTimer : MonoBehaviour
 // {
 //     private Text txtTimer;
 //     public float second;
