@@ -8,8 +8,6 @@ public class XLine_Test : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
 
-	public bool laser = false;
-
     bool closed = true;
     public AudioSource music;
     public AudioClip Open_door;
@@ -21,10 +19,14 @@ public class XLine_Test : MonoBehaviour {
 
     public bool Door_open_green = false;
     public bool Door_open_blue = false;
+    public bool laser = false;
+    public bool Position_Statues = false;
 
-    // public bool position_statues = false;
+    //Rotate Statues
     public float timeAnim = 1;
     public Vector3 goalOffset = Vector3.zero;
+
+    int i = 0;
 
     public void DoEffectStatues()
     {
@@ -38,15 +40,36 @@ public class XLine_Test : MonoBehaviour {
         for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
         {
             this.transform.Rotate(Vector3Speed * Time.deltaTime);
-            //this.transform.DORotate(Vector3Speed, 1).SetEase(Ease.InElastic);
-            // Attendre la prochaine frame physique (dans Time.deltaTime sec)
             yield return null;
         }
     }
 
+    public void PointerClick(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "statue1_venus_d2_lod1_100k_t1_8k_Material_u1_v1.001")
+        {
+            i++; 
+        }
+
+        if (e.target.name == "statue2_venus_d2_lod1_100k_t1_8k_Material_u1_v1.001")
+        {
+            i++;
+        }
+    }
+    void Update()
+    {
+        if (i%16==2)
+        {
+            Position_Statues = true;
+        }
+    }
+    //End rotate statues
+
+
+
+    //Laser
     public void DoEffect()
     {
-    
     
 
     // Use this for initialization
@@ -85,10 +108,6 @@ public class XLine_Test : MonoBehaviour {
         Door_open_blue = true;
     }
 
-    //public void Statues_Pos()
-    //{
-    //    position_statues = true;
-    //}
     
     private void Awake()
     {
