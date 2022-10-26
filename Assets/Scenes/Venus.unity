@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ab7392ccf2548868691872e27cede6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
+  laserPointer: {fileID: 1319288701}
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
