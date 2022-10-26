@@ -8,8 +8,9 @@ using Valve.VR.Extras;
 public class LetterReader : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
-    [SerializeField]
-    private Image _noteImage;
+    // [SerializeField]
+    public Image _noteImage;
+    public Image _buttonImage;
 
     void Awake()
     {
@@ -21,27 +22,25 @@ public class LetterReader : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "BackButton" && _noteImage.enabled == true)
+        if (e.target.name == "Plane_Lettre" && _noteImage.enabled == false)
         {
-            Debug.Log("Lettre was clicked");
-            _noteImage.enabled = false;
+            Debug.Log("Plane_Lettre was clicked");
+            _noteImage.enabled = true;
+            _buttonImage.enabled = true;
 
         }
-        else if (e.target.name == "Plane_Lettre" && _noteImage.enabled == false)
+        else if (e.target.name == "BackButton" && _noteImage.enabled == true)
         {
-            Debug.Log("Plane was clicked");
-            _noteImage.enabled = true;
+            Debug.Log("BackButton was clicked");
+            _noteImage.enabled = false;
+            _buttonImage.enabled = false;
 
         }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
-        {
-            Debug.Log("Cube was entered");
-        }
-        else if (e.target.name == "BackButton")
+        if (e.target.name == "BackButton")
         {
             Debug.Log("Button was entered");
         }
@@ -49,11 +48,7 @@ public class LetterReader : MonoBehaviour
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
-        {
-            Debug.Log("Cube was exited");
-        }
-        else if (e.target.name == "BackButton")
+        if (e.target.name == "BackButton")
         {
             Debug.Log("Button was exited");
         }
