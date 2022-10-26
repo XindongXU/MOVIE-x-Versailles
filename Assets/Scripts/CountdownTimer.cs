@@ -8,7 +8,7 @@ public class CountdownTimer : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 10f;
 
-    [SerializeField] UI countdownText;
+    [SerializeField] TMPro.TextMeshProUGUI countdownText;
 
     // Start is called before the first frame update
     void Start()
