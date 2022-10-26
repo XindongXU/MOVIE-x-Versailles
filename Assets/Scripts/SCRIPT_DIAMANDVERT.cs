@@ -21,7 +21,7 @@ public class SCRIPT_DIAMANDVERT : MonoBehaviour
     public void PointerClick(object sender, PointerEventArgs e)
     { 
 
-        if (e.target.name == "DiamandVert")
+        if (e.target.name == "DiamandVert1")
         {
             EffectToDo?.Invoke(); 
         }
