@@ -20,6 +20,7 @@ using UnityEngine.UI;
      private void Timer()
      {
          second = second - 1;
+         Debug.Log("BackButton was clicked");
          txtTimer.text = string.Format("{0:d2}:{1:d2}", (int)second / 60, (int)second % 60);
  
          if (second <= 3) 
