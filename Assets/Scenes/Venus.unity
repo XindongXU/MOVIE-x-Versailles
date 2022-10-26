@@ -1630,7 +1630,6 @@ GameObject:
   - component: {fileID: 577926547}
   - component: {fileID: 577926551}
   - component: {fileID: 577926549}
-  - component: {fileID: 577926548}
   - component: {fileID: 577926546}
   - component: {fileID: 577926552}
   - component: {fileID: 577926550}
@@ -1706,33 +1705,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577926544}
   m_Mesh: {fileID: -2934717439318261032, guid: ae0793593db64488b84b1eaaa1324d5e, type: 3}
---- !u!114 &577926548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577926544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aebfb19959ed42e1941c6d07515a8e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 577926551}
-        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
-        m_MethodName: DoEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &577926549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1820,7 +1792,6 @@ GameObject:
   - component: {fileID: 678022137}
   - component: {fileID: 678022139}
   - component: {fileID: 678022135}
-  - component: {fileID: 678022134}
   - component: {fileID: 678022132}
   - component: {fileID: 678022138}
   - component: {fileID: 678022136}
@@ -1896,33 +1867,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678022130}
   m_Mesh: {fileID: -2934717439318261032, guid: ae0793593db64488b84b1eaaa1324d5e, type: 3}
---- !u!114 &678022134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678022130}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aebfb19959ed42e1941c6d07515a8e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 678022137}
-        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
-        m_MethodName: DoEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &678022135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,7 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAnim: 1
-  goalOffset: {x: 0, y: 60, z: 0}
+  goalOffset: {x: 0, y: 20, z: 0}
 --- !u!1 &968283067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,7 +4132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAnim: 1
-  goalOffset: {x: 0, y: -60, z: 0}
+  goalOffset: {x: 0, y: -20, z: 0}
 --- !u!54 &2111298840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5852,7 +5796,6 @@ GameObject:
   - component: {fileID: 1895237628680107868}
   - component: {fileID: 7340808892706012166}
   - component: {fileID: 7340808892706012167}
-  - component: {fileID: 7340808892706012165}
   m_Layer: 0
   m_Name: statue2_venus_d2_lod1_100k_t1_8k_Material_u1_v1.001
   m_TagString: Untagged
@@ -6063,33 +6006,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6776158432835307889}
   m_Mesh: {fileID: -7667812979029829539, guid: 6ec77a2afadc7457e98f9f2d4a486dd5, type: 3}
---- !u!114 &7340808892706012165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776158432835307889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aebfb19959ed42e1941c6d07515a8e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2041422641}
-        m_TargetAssemblyTypeName: E_RotateStatues, Assembly-CSharp
-        m_MethodName: DoEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &7340808892706012166
 BoxCollider:
   m_ObjectHideFlags: 0
