@@ -8,7 +8,7 @@ public class XLine_Test : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
 
-	bool laser = false;
+	public bool laser = false;
 
     bool closed = true;
     public AudioSource music;
@@ -19,11 +19,33 @@ public class XLine_Test : MonoBehaviour {
     public GameObject RightDoorShaft;
     public GameObject Collider;
 
-    bool Door_open = false;
+    public bool Door_open_green = false;
+    public bool Door_open_blue = false;
 
-	public void DoEffect()
+    // public bool position_statues = false;
+    public float timeAnim = 1;
+    public Vector3 goalOffset = Vector3.zero;
+
+    public void DoEffectStatues()
     {
-    
+        StartCoroutine(AnimationRoutine());
+    }
+
+    public IEnumerator AnimationRoutine()
+    {
+        Vector3 Vector3Speed = goalOffset / timeAnim;
+
+        for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
+        {
+            this.transform.Rotate(Vector3Speed * Time.deltaTime);
+            //this.transform.DORotate(Vector3Speed, 1).SetEase(Ease.InElastic);
+            // Attendre la prochaine frame physique (dans Time.deltaTime sec)
+            yield return null;
+        }
+    }
+
+    public void DoEffect()
+    {
     
 
     // Use this for initialization
@@ -47,15 +69,20 @@ public class XLine_Test : MonoBehaviour {
 		}
 			
 		Line.transform.localScale=Sc;
-        bool laser = true;
+        print(this.name + " declench?par " + this.gameObject + this.laser);
+        laser = true;
 	}
 
-   
-    public void Open()
+
+    public void Open_green()
     {
-        Door_open = true;
+        Door_open_green = true;
     }
 
+    public void Open_blue()
+    {
+        Door_open_blue = true;
+    }
     
     private void Awake()
     {
@@ -73,7 +100,7 @@ public class XLine_Test : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   if (closed)
+    {   if (closed & laser)
         {
             float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
@@ -83,7 +110,7 @@ public class XLine_Test : MonoBehaviour {
             {
                 closed = false;
             }
-            if (Door_open == true)
+            if (Door_open_green == true & Door_open_blue == true)
             {
                 Destroy(Collider);
 
