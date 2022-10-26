@@ -24,8 +24,6 @@ public class XLine_Test : MonoBehaviour {
 
     public void DoEffect()
     {
-    
-    
 
     // Use this for initialization
     // Update is called once per frame
@@ -79,7 +77,7 @@ public class XLine_Test : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   if (closed)
+    {   if (closed & laser)
         {
             float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
