@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CountDownTimer : MonoBehaviour
 {
     private Text txtTimer;
-    private Image _GOImage;
+    public Image _GOImage;
     public float second;
  
     private void Start()
