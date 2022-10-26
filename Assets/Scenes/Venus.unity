@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 452025573}
   FXef: {fileID: 1090396538}
+  laser: 0
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
   LeftDoorShaft: {fileID: 1353057546}
@@ -434,6 +435,8 @@ MonoBehaviour:
   Collider: {fileID: 1797602201}
   Door_open_green: 0
   Door_open_blue: 0
+  timeAnim: 1
+  goalOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &214022024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 452025573}
   FXef: {fileID: 1090396538}
+  laser: 0
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
   LeftDoorShaft: {fileID: 1353057546}
@@ -1451,6 +1455,8 @@ MonoBehaviour:
   Collider: {fileID: 1797602201}
   Door_open_green: 0
   Door_open_blue: 0
+  timeAnim: 1
+  goalOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &577926552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 1741834690}
   FXef: {fileID: 1752391367}
+  laser: 0
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
   LeftDoorShaft: {fileID: 1353057546}
@@ -1614,6 +1621,8 @@ MonoBehaviour:
   Collider: {fileID: 1797602201}
   Door_open_green: 0
   Door_open_blue: 0
+  timeAnim: 1
+  goalOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &678022139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,7 +1876,7 @@ Transform:
   m_GameObject: {fileID: 743431881}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: 0.9398, y: -0.0312, z: 1.6601}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364872625}
@@ -2492,9 +2501,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 938846307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8b63da18b684d6cbd8a953b5365247, type: 3}
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Line: {fileID: 0}
+  FXef: {fileID: 0}
+  laser: 0
+  music: {fileID: 0}
+  Open_door: {fileID: 0}
+  LeftDoorShaft: {fileID: 0}
+  RightDoorShaft: {fileID: 0}
+  Collider: {fileID: 0}
+  Door_open_green: 0
+  Door_open_blue: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 20, z: 0}
 --- !u!1 &968283067
@@ -2823,7 +2842,7 @@ Transform:
   m_GameObject: {fileID: 1156885091}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0.9679, y: -0.2069, z: 5.3887}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364872625}
@@ -3058,6 +3077,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 30.728
+      objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -3111,8 +3150,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 494198, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 494198, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 494198, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.529
       objectReference: {fileID: 0}
     - target: {fileID: 4000011788863104, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4267,6 +4314,7 @@ GameObject:
   - component: {fileID: 2041422640}
   - component: {fileID: 2041422639}
   - component: {fileID: 2041422641}
+  - component: {fileID: 2041422642}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -4352,6 +4400,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8b63da18b684d6cbd8a953b5365247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeAnim: 1
+  goalOffset: {x: 0, y: -20, z: 0}
+--- !u!114 &2041422642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041422634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line: {fileID: 0}
+  FXef: {fileID: 0}
+  laser: 0
+  music: {fileID: 0}
+  Open_door: {fileID: 0}
+  LeftDoorShaft: {fileID: 0}
+  RightDoorShaft: {fileID: 0}
+  Collider: {fileID: 0}
+  Door_open_green: 0
+  Door_open_blue: 0
   timeAnim: 1
   goalOffset: {x: 0, y: -20, z: 0}
 --- !u!54 &2111298840
@@ -5809,8 +5881,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 938846312}
-        m_TargetAssemblyTypeName: E_RotateStatues, Assembly-CSharp
-        m_MethodName: DoEffect
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
+        m_MethodName: DoEffectStatues
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6362,9 +6434,9 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2041422641}
-        m_TargetAssemblyTypeName: E_RotateStatues, Assembly-CSharp
-        m_MethodName: DoEffect
+      - m_Target: {fileID: 2041422642}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
+        m_MethodName: DoEffectStatues
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
