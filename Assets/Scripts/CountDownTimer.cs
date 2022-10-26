@@ -20,7 +20,7 @@ public class CountDownTimer : MonoBehaviour
     {
         second = second - 1;
         txtTimer.text = string.Format("{0:d2}:{1:d2}", (int)second / 60, (int)second % 60);
-        Debug.Log(int(second));
+        Debug.Log((int)second);
         Debug.Log(txtTimer.text);
 
         if (second <= 3)
