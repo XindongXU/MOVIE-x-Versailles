@@ -15,14 +15,17 @@ public class SCRIPT_CLICK : MonoBehaviour
     {
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
-        laserPointer.PointerClick += PointerClick;
+        laserPointer.PointerClick += PointerClic1;
+        laserPointer.PointerClick += PointerClick2;
+        laserPointer.PointerClick += PointerClick3;
     }
-    public UnityEvent EffectToDo;
-    public void PointerClick(object sender, PointerEventArgs e)
+    public UnityEvent EffectToDo1;
+    public void PointerClick1(object sender, PointerEventArgs e)
     {
-        EffectToDo?.Invoke();
-
-        
+        if (e.target.name == "Cube")
+        {
+            EffectToDo1?.Invoke(); 
+        }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
