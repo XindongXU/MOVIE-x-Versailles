@@ -15,7 +15,7 @@ public class StartUI : MonoBehaviour
     // public GameObject _BvInterface;
     public GameObject _BvText;
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
-    bool _IsGameStarted = 0;
+    bool _IsGameStarted = false;
 
     void Awake()
     {
@@ -40,7 +40,7 @@ public class StartUI : MonoBehaviour
             Debug.Log("Plane_Start was clicked");
             Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
             _StartImage.enabled = true;
-            _IsGameStarted = 1;
+            _IsGameStarted = true;
             // _buttonImage.enabled = true;
 
             while (_BvText.GetComponent<Transform>().position.y <= 5)
@@ -92,7 +92,7 @@ public class StartUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_IsGameStarted == 1)
+        if (_IsGameStarted == true)
         {
             while (_BvText.GetComponent<Transform>().position.y <= 75)
             {
