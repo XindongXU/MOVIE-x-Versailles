@@ -38,11 +38,11 @@ public class XLine_Test : MonoBehaviour {
         for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
         {
             this.transform.Rotate(Vector3Speed * Time.deltaTime);
-            i = i + 1;
-            if (i%36==2)
-            {
-                Door_statues = true;
-            }
+            //i = i + 1;
+            //if (i%36==2)
+            //{
+            //    Door_statues = true;
+            //}
             
             yield return null;
         }
@@ -105,7 +105,7 @@ public class XLine_Test : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   if (closed & laser)
+    {   if (closed & laser & Door_statues)
         {
             float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
