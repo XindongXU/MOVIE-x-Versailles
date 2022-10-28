@@ -15,6 +15,7 @@ public class StartUI : MonoBehaviour
     // public GameObject _BvInterface;
     public GameObject _BvText;
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
+    bool _IsGameStarted = 0;
 
     void Awake()
     {
@@ -39,26 +40,29 @@ public class StartUI : MonoBehaviour
             Debug.Log("Plane_Start was clicked");
             Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
             _StartImage.enabled = true;
+            _IsGameStarted = 1;
             // _buttonImage.enabled = true;
 
-            while(_BvText.GetComponent<Transform>().position.y <= 75)
+            while (_BvText.GetComponent<Transform>().position.y <= 5)
             {
-                transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
+                _BvText.GetComponent<Transform>().Translate(new Vector3(0, 1 * Time.deltaTime, 0));
                 Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
                 // test
                 // from -45 to 75;
                 // duration : 120 deltaTime;
                 // Destroy(_BvInterface, 10.0f);
             }
+
+
             // _StartImage.enabled = false;
             // Destroy(_BvText);
 
-            // while(currentTime >= 0)
-            // {
-            //     currentTime -= 1 * Time.deltaTime;
-            //     countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
-            // }
-            // GameOver();
+            while (currentTime >= 0)
+            {
+                currentTime -= 1 * Time.deltaTime;
+                countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
+            }
+            GameOver();
         }
         
     }
@@ -88,6 +92,29 @@ public class StartUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_IsGameStarted == 1)
+        {
+            while (_BvText.GetComponent<Transform>().position.y <= 75)
+            {
+                _BvText.GetComponent<Transform>().Translate(new Vector3(0, 1 * Time.deltaTime, 0));
+                Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
+                // test
+                // from -45 to 75;
+                // duration : 120 deltaTime;
+                // Destroy(_BvInterface, 10.0f);
+            }
+
+
+            // _StartImage.enabled = false;
+            // Destroy(_BvText);
+
+            while (currentTime >= 0)
+            {
+                currentTime -= 1 * Time.deltaTime;
+                countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
+            }
+            GameOver();
+        }
         // while(this.GetComponent<Transform>().position.y <= 75)
         // {
         //     transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
@@ -97,5 +124,7 @@ public class StartUI : MonoBehaviour
         // }
         // // Destroy(gameObject);
         // Destroy(_BvInterface);
+        //transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
+        //Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
     }
 }
