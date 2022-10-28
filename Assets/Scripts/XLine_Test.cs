@@ -21,50 +21,6 @@ public class XLine_Test : MonoBehaviour {
 
     public bool Door_open_green = false;
     public bool Door_open_blue = false;
-    public bool Statues = false;
-
-    //Rotate Stautes
-    public float timeAnim = 1;
-    public Vector3 goalOffset = Vector3.zero;
-
-    public void DoEffect()
-    {
-        StartCoroutine(AnimationRoutine());
-    }
-
-    public IEnumerator AnimationRoutine()
-    {
-        Vector3 Vector3Speed = goalOffset / timeAnim;
-
-        for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
-        {
-            this.transform.Rotate(Vector3Speed * Time.deltaTime);
-            //this.transform.DORotate(Vector3Speed, 1).SetEase(Ease.InElastic);
-            // Attendre la prochaine frame physique (dans Time.deltaTime sec)
-            yield return null;
-        }
-    }
-    int i = 0;
-
-    public UnityEvent EffectToDo;
-    public void PointerClick(object sender, PointerEventArgs e)
-    {
-        if (e.target.name == "statue1_venus_d2_lod1_100k_t1_8k_Material_u1_v1.001")
-        {
-            EffectToDo?.Invoke();
-            i++; 
-        }
-
-        if (e.target.name == "statue2_venus_d2_lod1_100k_t1_8k_Material_u1_v1.001")
-        {
-            EffectToDo?.Invoke();
-            i++;
-        }
-        if (i%36 == 2)
-        {
-            Statues = true;
-        }
-    }
 
     public void DoEffect()
     {
@@ -90,7 +46,7 @@ public class XLine_Test : MonoBehaviour {
 		}
 			
 		Line.transform.localScale=Sc;
-        laser = true;
+        bool laser = true;
 	}
 
 
