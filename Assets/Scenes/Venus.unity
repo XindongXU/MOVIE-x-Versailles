@@ -384,9 +384,10 @@ MonoBehaviour:
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
-  Door_open_green: 0
-  Door_open_blue: 0
+  Door_open_green: 1
+  Door_open_blue: 1
   Door_statues: 0
+  laser: 1
   timeAnim: 1
   goalOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &214022024
@@ -20761,6 +20762,7 @@ MonoBehaviour:
   Door_open_green: 0
   Door_open_blue: 0
   Door_statues: 0
+  laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &577926552
@@ -20927,6 +20929,7 @@ MonoBehaviour:
   Door_open_green: 0
   Door_open_blue: 0
   Door_statues: 0
+  laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &678022139
@@ -23230,9 +23233,10 @@ MonoBehaviour:
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
-  Door_open_green: 0
-  Door_open_blue: 0
-  Door_statues: 0
+  Door_open_green: 1
+  Door_open_blue: 1
+  Door_statues: 1
+  laser: 1
   timeAnim: 1
   goalOffset: {x: 0, y: -20, z: 0}
 --- !u!1 &968283067
@@ -25132,7 +25136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c590298deaa444bd50d51e2262bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorShaft: {fileID: 0}
+  DoorShaft: {fileID: 1353057546}
 --- !u!1 &1391153826
 GameObject:
   m_ObjectHideFlags: 0
@@ -25635,7 +25639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c590298deaa444bd50d51e2262bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorShaft: {fileID: 0}
+  DoorShaft: {fileID: 1674775299}
 --- !u!1 &1723461117
 GameObject:
   m_ObjectHideFlags: 0
@@ -45703,6 +45707,7 @@ MonoBehaviour:
   Door_open_green: 0
   Door_open_blue: 0
   Door_statues: 0
+  laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 20, z: 0}
 --- !u!54 &2111298840
