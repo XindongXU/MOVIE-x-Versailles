@@ -22,12 +22,14 @@ public class Show_letter : MonoBehaviour
             time += Time.deltaTime;
             if (time > 3)
             {
-                if (particleSystem.isPlaying)
-                {
-                    EffectToDo?.Invoke();
-                    print("yes");
-                }
-                
+                //if (particleSystem.isPlaying)
+                //{
+                //    EffectToDo?.Invoke();
+                //    print("yes");
+                //}
+                EffectToDo?.Invoke();
+                print("yes");
+
             }
         }
         else

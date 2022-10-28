@@ -43,26 +43,26 @@ public class StartUI : MonoBehaviour
             _IsGameStarted = true;
             // _buttonImage.enabled = true;
 
-            while (_BvText.GetComponent<Transform>().position.y <= 5)
-            {
-                _BvText.GetComponent<Transform>().Translate(new Vector3(0, 1 * Time.deltaTime, 0));
-                Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
-                // test
-                // from -45 to 75;
-                // duration : 120 deltaTime;
-                // Destroy(_BvInterface, 10.0f);
-            }
+            //while (_BvText.GetComponent<Transform>().position.y <= 5)
+            //{
+            //    _BvText.GetComponent<Transform>().Translate(new Vector3(0, 1 * Time.deltaTime, 0));
+            //    Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
+            //    // test
+            //    // from -45 to 75;
+            //    // duration : 120 deltaTime;
+            //    // Destroy(_BvInterface, 10.0f);
+            //}
 
 
             // _StartImage.enabled = false;
             // Destroy(_BvText);
 
-            while (currentTime >= 0)
-            {
-                currentTime -= 1 * Time.deltaTime;
-                countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
-            }
-            GameOver();
+            //while (currentTime >= 0)
+            //{
+            //    currentTime -= 1 * Time.deltaTime;
+            //    countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
+            //}
+            //GameOver();
         }
         
     }
