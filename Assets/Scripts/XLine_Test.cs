@@ -8,7 +8,6 @@ public class XLine_Test : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
 
-	bool laser = false;
 
     bool closed = true;
     public AudioSource music;
@@ -22,6 +21,7 @@ public class XLine_Test : MonoBehaviour {
     public bool Door_open_green = false;
     public bool Door_open_blue = false;
     public bool Door_statues = false;
+    public bool laser = false;
 
     public float timeAnim = 1;
     public Vector3 goalOffset = Vector3.zero;
