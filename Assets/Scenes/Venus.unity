@@ -386,6 +386,9 @@ MonoBehaviour:
   Collider: {fileID: 1797602201}
   Door_open_green: 0
   Door_open_blue: 0
+  Door_statues: 0
+  timeAnim: 1
+  goalOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &214022024
 GameObject:
   m_ObjectHideFlags: 0
@@ -20757,6 +20760,9 @@ MonoBehaviour:
   Collider: {fileID: 1797602201}
   Door_open_green: 0
   Door_open_blue: 0
+  Door_statues: 0
+  timeAnim: 1
+  goalOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &577926552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20920,6 +20926,9 @@ MonoBehaviour:
   Collider: {fileID: 1797602201}
   Door_open_green: 0
   Door_open_blue: 0
+  Door_statues: 0
+  timeAnim: 1
+  goalOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &678022139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23114,6 +23123,7 @@ GameObject:
   - component: {fileID: 938846311}
   - component: {fileID: 938846310}
   - component: {fileID: 938846312}
+  - component: {fileID: 938846313}
   m_Layer: 0
   m_Name: Statue venus 1
   m_TagString: Untagged
@@ -23199,6 +23209,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8b63da18b684d6cbd8a953b5365247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeAnim: 1
+  goalOffset: {x: 0, y: -20, z: 0}
+--- !u!114 &938846313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938846307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line: {fileID: 1741934363}
+  FXef: {fileID: 1741934353}
+  music: {fileID: 0}
+  Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
+  LeftDoorShaft: {fileID: 1353057546}
+  RightDoorShaft: {fileID: 1674775299}
+  Collider: {fileID: 1797602201}
+  Door_open_green: 0
+  Door_open_blue: 0
+  Door_statues: 0
   timeAnim: 1
   goalOffset: {x: 0, y: -20, z: 0}
 --- !u!1 &968283067
@@ -45656,9 +45690,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041422634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8b63da18b684d6cbd8a953b5365247, type: 3}
+  m_Script: {fileID: 11500000, guid: c1c18da33473d4503990f86b7aafdfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Line: {fileID: 451992134}
+  FXef: {fileID: 451992140}
+  music: {fileID: 0}
+  Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
+  LeftDoorShaft: {fileID: 1353057546}
+  RightDoorShaft: {fileID: 1674775299}
+  Collider: {fileID: 1797602201}
+  Door_open_green: 0
+  Door_open_blue: 0
+  Door_statues: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 20, z: 0}
 --- !u!54 &2111298840
@@ -48795,13 +48839,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23852d9c67ab94272867fc5c10705b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
+  laserPointer: {fileID: 1319288701}
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 938846312}
-        m_TargetAssemblyTypeName: E_RotateStatues, Assembly-CSharp
-        m_MethodName: DoEffect
+      - m_Target: {fileID: 938846313}
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
+        m_MethodName: DoEffectStatues
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -49433,13 +49477,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23852d9c67ab94272867fc5c10705b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
+  laserPointer: {fileID: 1319288701}
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2041422641}
-        m_TargetAssemblyTypeName: E_RotateStatues, Assembly-CSharp
-        m_MethodName: DoEffect
+        m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp
+        m_MethodName: DoEffectStatues
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

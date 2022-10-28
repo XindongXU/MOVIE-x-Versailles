@@ -21,6 +21,32 @@ public class XLine_Test : MonoBehaviour {
 
     public bool Door_open_green = false;
     public bool Door_open_blue = false;
+    public bool Door_statues = false;
+
+    public float timeAnim = 1;
+    public Vector3 goalOffset = Vector3.zero;
+
+    public void DoEffectStatues()
+    {
+        StartCoroutine(AnimationRoutine());
+    }
+    int i = 0;
+    public IEnumerator AnimationRoutine()
+    {
+        Vector3 Vector3Speed = goalOffset / timeAnim;
+
+        for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
+        {
+            this.transform.Rotate(Vector3Speed * Time.deltaTime);
+            i = i + 1;
+            if (i%36==2)
+            {
+                Door_statues = true;
+            }
+            
+            yield return null;
+        }
+    }
 
     public void DoEffect()
     {
