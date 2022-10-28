@@ -37,34 +37,30 @@ public class StartUI : MonoBehaviour
         if (e.target.name == "Plane_Start" && _StartImage.enabled == false)
         {
             Debug.Log("Plane_Start was clicked");
+            Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
             _StartImage.enabled = true;
             // _buttonImage.enabled = true;
 
             while(_BvText.GetComponent<Transform>().position.y <= 75)
             {
-            transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
-            // test
-            // from -45 to 75;
-            // duration : 120 deltaTime;
-            // Destroy(_BvInterface, 10.0f);
+                transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
+                Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
+                // test
+                // from -45 to 75;
+                // duration : 120 deltaTime;
+                // Destroy(_BvInterface, 10.0f);
             }
-            _StartImage.enabled = false;
-            Destroy(_BvText);
+            // _StartImage.enabled = false;
+            // Destroy(_BvText);
 
-            while(currentTime >= 0)
-            {
-                currentTime -= 1 * Time.deltaTime;
-                countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
-            }
-            GameOver();
+            // while(currentTime >= 0)
+            // {
+            //     currentTime -= 1 * Time.deltaTime;
+            //     countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
+            // }
+            // GameOver();
         }
-        // else if (e.target.name == "BackButton" && _StartImage.enabled == true)
-        // {
-        //     Debug.Log("BackButton was clicked");
-        //     _StartImage.enabled = false;
-        //     _buttonImage.enabled = false;
-
-        // }
+        
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
@@ -101,8 +97,5 @@ public class StartUI : MonoBehaviour
         // }
         // // Destroy(gameObject);
         // Destroy(_BvInterface);
-
-        
-
     }
 }
