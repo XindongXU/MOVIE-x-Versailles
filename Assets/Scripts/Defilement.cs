@@ -33,6 +33,7 @@ public class Defilement : MonoBehaviour
             while(_BvText.GetComponent<Transform>().position.y <= 75)
             {
             transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
+            // test
             // from -45 to 75;
             // duration : 120 deltaTime;
             // Destroy(_BvInterface, 10.0f);
