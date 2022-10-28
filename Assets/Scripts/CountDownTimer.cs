@@ -23,8 +23,10 @@ public class CountDownTimer : MonoBehaviour
 
     }
 
+
     void Update()
     {
+        // Player.transform.position;
         currentTime -= 1 * Time.deltaTime;
         // countdownText.text = currentTime.ToString("0");
 
