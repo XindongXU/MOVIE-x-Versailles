@@ -13,7 +13,7 @@ public class Interactable_statue_after_lights_on : MonoBehaviour
     void Start()
     {
         myActivateLight = myLight.GetComponent<Light>();
-        GameObject.Find("Buste").GetComponent<Interactable>().enabled = false;
+        //GameObject.Find("Buste").GetComponent<Interactable>().enabled = false;
         //print("bustebuste");
     }
 
@@ -22,7 +22,8 @@ public class Interactable_statue_after_lights_on : MonoBehaviour
     {
         if (myActivateLight.enabled == true)
         {
-            GameObject.Find("Buste").GetComponent<Interactable>().enabled = true;
+            //GameObject.Find("Buste").GetComponent<Interactable>().enabled = true;
+            buste.AddComponent<Interactable>();
             buste.AddComponent<Throwable>();
         }
         /*
