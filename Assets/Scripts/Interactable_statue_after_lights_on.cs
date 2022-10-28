@@ -13,6 +13,7 @@ public class Interactable_statue_after_lights_on : MonoBehaviour
     {
         myActivateLight = myLight.GetComponent<Light>();
         GameObject.Find("Buste").GetComponent<Interactable>().enabled = false;
+        print("bustebuste");
     }
 
     // Update is called once per frame
