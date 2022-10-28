@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
 
-public class Defilement : MonoBehaviour
+public class StartUI : MonoBehaviour
 {
     float currentTime = 0f;
     public float startingTime;
@@ -18,8 +18,8 @@ public class Defilement : MonoBehaviour
 
     void Awake()
     {
-        // laserPointer.PointerIn += PointerInside;
-        // laserPointer.PointerOut += PointerOutside;
+        laserPointer.PointerIn += PointerInside;
+        laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
 
     }
@@ -65,6 +65,22 @@ public class Defilement : MonoBehaviour
         //     _buttonImage.enabled = false;
 
         // }
+    }
+
+    public void PointerInside(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "BackButton")
+        {
+            Debug.Log("Button was entered");
+        }
+    }
+
+    public void PointerOutside(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "BackButton")
+        {
+            Debug.Log("Button was exited");
+        }
     }
 
     // Start is called before the first frame update
