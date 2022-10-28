@@ -48,7 +48,7 @@ public class XLine_Test : MonoBehaviour {
 		}
 			
 		Line.transform.localScale=Sc;
-        bool laser = true;
+        laser = true;
 	}
 
 
@@ -79,7 +79,7 @@ public class XLine_Test : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   if (closed)
+    {   if (closed & laser)
         {
             float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
