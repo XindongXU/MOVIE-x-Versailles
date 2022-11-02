@@ -23233,10 +23233,10 @@ MonoBehaviour:
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
-  Door_open_green: 1
-  Door_open_blue: 1
-  Door_statues: 1
-  laser: 1
+  Door_open_green: 0
+  Door_open_blue: 0
+  Door_statues: 0
+  laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: -20, z: 0}
 --- !u!1 &968283067
