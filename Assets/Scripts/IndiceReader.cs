@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
-
+// ajouter sous player
 public class IndiceReader : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public UnityEvent EffectToDo;
+    // public string TagFilter;
     // [SerializeField]
     public Image _indiceImage0;
     public Image _indiceImage1;
@@ -15,7 +17,7 @@ public class IndiceReader : MonoBehaviour
     public Image _indiceImage3;
 
     public Image _buttonImage;
-    public int _roomNum;
+    private int _roomNum = 0;
 
     void Awake()
     {
@@ -23,6 +25,39 @@ public class IndiceReader : MonoBehaviour
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
 
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "room0")
+        {
+            print("enter Abondance");
+            EffectToDo?.Invoke();
+            _roomNum = 0;
+            print(_roomNum);
+        }
+        else if (other.name == "room1")
+        {
+            print("enter Diane");
+            EffectToDo?.Invoke();
+            _roomNum = 1;
+            print(_roomNum);
+        }
+        else if (other.name == "room2")
+        {
+            print("enter Diane");
+            EffectToDo?.Invoke();
+            _roomNum = 2;
+            print(_roomNum);
+        }
+        else if (other.name == "room3")
+        {
+            print("enter Diane");
+            EffectToDo?.Invoke();
+            _roomNum = 3;
+            print(_roomNum);
+        }
+        
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
@@ -91,17 +126,17 @@ public class IndiceReader : MonoBehaviour
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "BackButton")
+        if (e.target.name == "IndiceBackButton")
         {
-            Debug.Log("Button was entered");
+            Debug.Log("IndiceBackButton was entered");
         }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "BackButton")
+        if (e.target.name == "IndiceBackButton")
         {
-            Debug.Log("Button was exited");
+            Debug.Log("IndiceBackButton was exited");
         }
     }
 
