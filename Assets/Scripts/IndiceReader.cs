@@ -8,7 +8,7 @@ using Valve.VR.Extras;
 public class IndiceReader : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
-    public UnityEvent EffectToDo;
+    //public UnityEvent EffectToDo;
     // public string TagFilter;
     // [SerializeField]
     public Image _indiceImage0;
@@ -32,28 +32,28 @@ public class IndiceReader : MonoBehaviour
         if (other.name == "room0")
         {
             print("enter Abondance");
-            EffectToDo?.Invoke();
+            //EffectToDo?.Invoke();
             _roomNum = 0;
             print(_roomNum);
         }
         else if (other.name == "room1")
         {
             print("enter Diane");
-            EffectToDo?.Invoke();
+            //EffectToDo?.Invoke();
             _roomNum = 1;
             print(_roomNum);
         }
         else if (other.name == "room2")
         {
             print("enter Diane");
-            EffectToDo?.Invoke();
+            //EffectToDo?.Invoke();
             _roomNum = 2;
             print(_roomNum);
         }
         else if (other.name == "room3")
         {
             print("enter Diane");
-            EffectToDo?.Invoke();
+            //EffectToDo?.Invoke();
             _roomNum = 3;
             print(_roomNum);
         }
