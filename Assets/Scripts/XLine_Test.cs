@@ -4,9 +4,11 @@ using System.Collections;
 
 
 
-public class XLine_Test : MonoBehaviour {
-	public GameObject Line;
-	public GameObject FXef;//Effet de particules du laser frappant l'objet
+public class XLine_Test : MonoBehaviour
+{
+    public GameObject Line;
+    public GameObject FXef;//Effet de particules du laser frappant l'objet
+    public GameObject statue;
 
 
     bool closed = true;
@@ -18,10 +20,12 @@ public class XLine_Test : MonoBehaviour {
     public GameObject RightDoorShaft;
     public GameObject Collider;
 
-    public bool Door_open_green = false;
-    public bool Door_open_blue = false;
-    public bool Door_statues = false;
-    public bool laser = false;
+    bool Door_open_green;
+    bool Door_open_blue;
+    bool Door_statues = false;
+    bool laser = false;
+
+
 
     public float timeAnim = 1;
     public Vector3 goalOffset = Vector3.zero;
@@ -30,7 +34,7 @@ public class XLine_Test : MonoBehaviour {
     {
         StartCoroutine(AnimationRoutine());
     }
-    int i = 0;
+    float AngY;
     public IEnumerator AnimationRoutine()
     {
         Vector3 Vector3Speed = goalOffset / timeAnim;
@@ -38,57 +42,53 @@ public class XLine_Test : MonoBehaviour {
         for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
         {
             this.transform.Rotate(Vector3Speed * Time.deltaTime);
-            i += 1;
-            if (i%36==2)
-            {
-                Door_statues = true;
-            }
-            Debug.Log(i);
             yield return null;
         }
     }
 
     public void DoEffect()
     {
-    
-    
 
-    // Use this for initialization
-    // Update is called once per frame
+        // Use this for initialization
+        // Update is called once per frame
 
-		RaycastHit hit;
-		Vector3 Sc;// Transformer la taille
-		Sc.x=0.5f;
-		Sc.z=0.5f;
-        if (Physics.Raycast(transform.position, this.transform.forward, out hit)){
-			Debug.DrawLine(this.transform.position,hit.point);
-			Sc.y=hit.distance;
-			FXef.transform.position=hit.point;
-			FXef.SetActive(true);
-		}
-        //Lorsque le laser ne touche pas l'objet, maintenez la longueur du rayon à 500 m et réglez l'effet de frappe pour qu'il ne s'affiche pas
+        RaycastHit hit;
+        Vector3 Sc;// Transformer la taille
+        Sc.x = 0.5f;
+        Sc.z = 0.5f;
+        if (Physics.Raycast(transform.position, this.transform.forward, out hit))
+        {
+            Debug.DrawLine(this.transform.position, hit.point);
+            Sc.y = hit.distance;
+            FXef.transform.position = hit.point;
+            FXef.SetActive(true);
+        }
+        //Lorsque le laser ne touche pas l'objet, maintenez la longueur du rayon à 50 m et réglez l'effet de frappe pour qu'il ne s'affiche pas
         else
         {
-			Sc.y=500;
-		    FXef.SetActive(false);
-		}
-			
-		Line.transform.localScale=Sc;
+            Sc.y = 50;
+            FXef.SetActive(false);
+        }
+
+        Line.transform.localScale = Sc;
         laser = true;
-	}
+        Debug.Log("le laser est en mode:" + laser);
+    }
 
 
     public void Open_green()
     {
         Door_open_green = true;
+        Debug.Log("le diamand vert est en mode" + Door_open_green);
     }
 
     public void Open_blue()
     {
         Door_open_blue = true;
+        Debug.Log("le diamand bleu est en mode" + Door_open_blue);
     }
 
-    
+
     private void Awake()
     {
         music = gameObject.AddComponent<AudioSource>();
@@ -101,11 +101,18 @@ public class XLine_Test : MonoBehaviour {
     {
         m_LeftDoor = LeftDoorShaft.GetComponent<Door>();
         m_RightDoor = RightDoorShaft.GetComponent<Door>();
+
+        Door_open_blue = false;
+        Door_open_blue = false;
+
+
     }
 
     // Update is called once per frame
     void Update()
-    {   if (closed & laser & Door_statues)
+    {
+
+        if (closed && laser)
         {
             float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
@@ -116,25 +123,44 @@ public class XLine_Test : MonoBehaviour {
             {
                 closed = false;
             }
-            if (Door_open_green == true & Door_open_blue == true )
+            AngY = statue.transform.localEulerAngles.y;
+            if (AngY > 310 && AngY < 330)
             {
+                Door_statues = true;
+                Debug.Log("les statues sont en mode" + Door_statues);
+            }
+
+            Debug.Log("statue =" + Door_statues);
+            Debug.Log("laqer =" + laser);
+            Debug.Log("vert=" + Door_open_green);
+            Debug.Log("bleu=" + Door_open_blue);
+
+            if (Door_open_green == true && Door_open_blue == true && Door_statues == true)
+            {
+                Debug.Log("statue =" + Door_statues);
+                Debug.Log("laqer ="+ laser);
+                Debug.Log("vert="+ Door_open_green);
+                Debug.Log("bleu="+ Door_open_blue);
+
                 Destroy(Collider);
 
                 music.clip = Open_door;
                 music.Play();
 
-                
+
                 m_LeftDoor.OpenLeftDoorMethod();
                 m_RightDoor.OpenRightDoorMethod();
 
             }
 
         }
-         
-        
+
+
 
     }
+}
 
-    }
+
+    
 
 

@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class D_OnEnter : MonoBehaviour
+public class D_OnStay : MonoBehaviour
 {
     public UnityEvent EffectToDo;
     public string TagFilter;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag(TagFilter))
         {
@@ -24,12 +23,12 @@ public class D_OnEnter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -20,7 +20,7 @@ public class SCRIPT_DIAMANDBLEU : MonoBehaviour
     public UnityEvent EffectToDo;
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "DiamandBleu1")
+        if (e.target.name == "CubeBleu")
         {
             EffectToDo?.Invoke(); 
         }
