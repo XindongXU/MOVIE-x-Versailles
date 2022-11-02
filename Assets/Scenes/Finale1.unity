@@ -1316,6 +1316,9 @@ MonoBehaviour:
   LeftDoorShaft: {fileID: 1058633636}
   RightDoorShaft: {fileID: 950094014}
   Collider: {fileID: 2081545367}
+  EffectToDo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &146874601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 160145497}
   _noteImage: {fileID: 0}
+  EffectToDo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &160145497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6363,6 +6369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLight: {fileID: 946757965}
+  buste: {fileID: 1690810555}
 --- !u!54 &1690810562
 Rigidbody:
   m_ObjectHideFlags: 0
