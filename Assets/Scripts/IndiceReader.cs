@@ -24,7 +24,6 @@ public class IndiceReader : MonoBehaviour
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
-
     }
 
     public void OnTriggerEnter(Collider other)
@@ -71,19 +70,19 @@ public class IndiceReader : MonoBehaviour
                 switch (_roomNum)
                 {
                     case 0:
-                        Debug.Log("Abondance");
+                        Debug.Log("Indice Abondance in");
                         _indiceImage0.enabled = true;
                         break;
                     case 1:
-                        Debug.Log("Hercule");
+                        Debug.Log("Indice Hercule in");
                         _indiceImage1.enabled = true;
                         break;
                     case 2:
-                        Debug.Log("Venus");
+                        Debug.Log("Indice Venus in");
                         _indiceImage2.enabled = true;
                         break;
                     case 3:
-                        Debug.Log("Diane");
+                        Debug.Log("Indice Diane in");
                         _indiceImage3.enabled = true;
                         break;
                     default:
@@ -98,28 +97,33 @@ public class IndiceReader : MonoBehaviour
             if (_indiceImage0.enabled == true || _indiceImage1.enabled == true || _indiceImage2.enabled == true || _indiceImage3.enabled == true) 
             {
                 _buttonImage.enabled = false;
-                switch (_roomNum)
-                {
-                    case 0:
-                        Debug.Log("Abondance");
-                        _indiceImage0.enabled = false;
-                        break;
-                    case 1:
-                        Debug.Log("Hercule");
-                        _indiceImage1.enabled = false;
-                        break;
-                    case 2:
-                        Debug.Log("Venus");
-                        _indiceImage2.enabled = false;
-                        break;
-                    case 3:
-                        Debug.Log("Diane");
-                        _indiceImage3.enabled = false;
-                        break;
-                    default:
-                        Debug.Log("Nowhere");
-                        break;
-                }
+                _indiceImage0.enabled = false;
+                _indiceImage1.enabled = false;
+                _indiceImage2.enabled = false;
+                _indiceImage3.enabled = false;
+
+                // switch (_roomNum)
+                // {
+                //     case 0:
+                //         Debug.Log("Indice Abondance out");
+                //         _indiceImage0.enabled = false;
+                //         break;
+                //     case 1:
+                //         Debug.Log("Indice Hercule out");
+                //         _indiceImage1.enabled = false;
+                //         break;
+                //     case 2:
+                //         Debug.Log("Indice Venus out");
+                //         _indiceImage2.enabled = false;
+                //         break;
+                //     case 3:
+                //         Debug.Log("Indice Diane out");
+                //         _indiceImage3.enabled = false;
+                //         break;
+                //     default:
+                //         Debug.Log("Nowhere");
+                //         break;
+                // }
             }
         }
     }
