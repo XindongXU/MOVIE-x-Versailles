@@ -13,7 +13,7 @@ public class StartUI : MonoBehaviour
     public SteamVR_LaserPointer laserPointer;
     public Image _StartImage;
     public Image _GOImage;
-    public TMPro.TextMeshProUGUI _RestartImage;
+    public Image _RestartImage;
 
     // public GameObject _BvInterface;
     public GameObject _BvText;
