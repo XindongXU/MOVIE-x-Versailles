@@ -38,12 +38,12 @@ public class XLine_Test : MonoBehaviour {
         for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
         {
             this.transform.Rotate(Vector3Speed * Time.deltaTime);
-            i = i + 1;
+            i += 1;
             if (i%36==2)
             {
                 Door_statues = true;
             }
-            
+            Debug.Log(i);
             yield return null;
         }
     }
@@ -111,6 +111,7 @@ public class XLine_Test : MonoBehaviour {
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
             Debug.Log(LeftDoorShaftRotation);
             Debug.Log(closed);
+
             if ((LeftDoorShaftRotation >= 100) && (-180 <= RightDoorShaftRotation))
             {
                 closed = false;
