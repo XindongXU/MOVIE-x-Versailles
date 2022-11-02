@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IsWhichRoom : MonoBehaviour
 {
-    public UnityEvent EffectToDo;
+    //public UnityEvent EffectToDo;
     public string TagFilter;
     
     public void OnTriggerEnter(Collider other)
@@ -12,7 +12,7 @@ public class IsWhichRoom : MonoBehaviour
         if (other.name == TagFilter)
         {
             print(this.name + " declenche par " + this.gameObject);
-            EffectToDo?.Invoke();
+            //EffectToDo?.Invoke();
 
         }
         else
