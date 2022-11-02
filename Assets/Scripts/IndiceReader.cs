@@ -27,37 +27,61 @@ public class IndiceReader : MonoBehaviour
         laserPointer.PointerClick += PointerClick;
     }
 
-    public void OnTriggerEnter(Collider other)
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.name == "Room0")
+    //    {
+    //        print("enter Hercule");
+    //        //EffectToDo?.Invoke();
+    //        _roomNum = 0;
+    //        print(_roomNum);
+    //    }
+    //    else if (other.name == "Room1")
+    //    {
+    //        print("enter Abondance");
+    //        //EffectToDo?.Invoke();
+    //        _roomNum = 1;
+    //        print(_roomNum);
+    //    }
+    //    else if (other.name == "Room2")
+    //    {
+    //        print("enter Venus");
+    //        //EffectToDo?.Invoke();
+    //        _roomNum = 2;
+    //        print(_roomNum);
+    //    }
+    //    else if (other.name == "Room3")
+    //    {
+    //        print("enter Diane");
+    //        //EffectToDo?.Invoke();
+    //        _roomNum = 3;
+    //        print(_roomNum);
+    //    }
+
+    //}
+
+    public void Roomnumber0()
     {
-        if (other.name == "Room0")
-        {
-            print("enter Abondance");
-            //EffectToDo?.Invoke();
-            _roomNum = 0;
-            print(_roomNum);
-        }
-        else if (other.name == "Room1")
-        {
-            print("enter Diane");
-            //EffectToDo?.Invoke();
-            _roomNum = 1;
-            print(_roomNum);
-        }
-        else if (other.name == "Room2")
-        {
-            print("enter Diane");
-            //EffectToDo?.Invoke();
-            _roomNum = 2;
-            print(_roomNum);
-        }
-        else if (other.name == "Room3")
-        {
-            print("enter Diane");
-            //EffectToDo?.Invoke();
-            _roomNum = 3;
-            print(_roomNum);
-        }
-        
+        _roomNum = 0;
+        Debug.Log("roomnumber = " + _roomNum);
+    }
+
+    public void Roomnumber1()
+    {
+        _roomNum = 1;
+        Debug.Log("roomnumber = " + _roomNum);
+    }
+
+    public void Roomnumber2()
+    {
+        _roomNum = 2;
+        Debug.Log("roomnumber = " + _roomNum);
+    }
+
+    public void Roomnumber3()
+    {
+        _roomNum = 3;
+        Debug.Log("roomnumber = " + _roomNum);
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
@@ -71,11 +95,11 @@ public class IndiceReader : MonoBehaviour
                 switch (_roomNum)
                 {
                     case 0:
-                        Debug.Log("Indice Abondance in");
+                        Debug.Log("Indice Hercule in");
                         _indiceImage0.enabled = true;
                         break;
                     case 1:
-                        Debug.Log("Indice Hercule in");
+                        Debug.Log("Indice Abondance in");
                         _indiceImage1.enabled = true;
                         break;
                     case 2:
