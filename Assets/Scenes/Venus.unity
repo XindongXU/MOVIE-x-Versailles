@@ -295,7 +295,6 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   TagFilter: 
 --- !u!1 &189529506
 GameObject:
@@ -346,15 +345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e8bef70ca1aa45873347b38beb16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closed: 1
   music: {fileID: 0}
   Open_door: {fileID: 0}
-  m_LeftDoor: {fileID: 0}
-  m_RightDoor: {fileID: 0}
   LeftDoorShaft: {fileID: 0}
   RightDoorShaft: {fileID: 0}
   Collider: {fileID: 0}
-  Door_open: 0
 --- !u!114 &189529509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +365,6 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &189529510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,11 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 1741934363}
   FXef: {fileID: 1741934353}
-  closed: 1
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  m_LeftDoor: {fileID: 0}
-  m_RightDoor: {fileID: 0}
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
@@ -399,7 +390,6 @@ MonoBehaviour:
   laser: 1
   timeAnim: 1
   goalOffset: {x: 0, y: 0, z: 0}
-  i: 0
 --- !u!1 &214022024
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +568,6 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &256407184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,7 +691,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 0}
   FXef: {fileID: 0}
-  laser: 0
 --- !u!95 &442608000
 Animator:
   serializedVersion: 4
@@ -20751,11 +20739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 451992134}
   FXef: {fileID: 451992140}
-  closed: 1
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  m_LeftDoor: {fileID: 0}
-  m_RightDoor: {fileID: 0}
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
@@ -20765,7 +20750,6 @@ MonoBehaviour:
   laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 0, z: 0}
-  i: 0
 --- !u!114 &577926552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20782,8 +20766,7 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 577926551}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp, m_MethodName: DoEffect, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - {m_Target: {fileID: 577926551}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp: }
 --- !u!1 &678022130
 GameObject:
   m_ObjectHideFlags: 0
@@ -20897,11 +20880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 1741934363}
   FXef: {fileID: 1741934353}
-  closed: 1
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  m_LeftDoor: {fileID: 0}
-  m_RightDoor: {fileID: 0}
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
@@ -20911,7 +20891,6 @@ MonoBehaviour:
   laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 0, z: 0}
-  i: 0
 --- !u!114 &678022139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20928,8 +20907,7 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 678022137}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp, m_MethodName: DoEffect, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - {m_Target: {fileID: 678022137}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp: }
 --- !u!1 &685286640
 GameObject:
   m_ObjectHideFlags: 0
@@ -21087,7 +21065,6 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!1 &743431881
 GameObject:
   m_ObjectHideFlags: 0
@@ -23071,11 +23048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 1741934363}
   FXef: {fileID: 1741934353}
-  closed: 1
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  m_LeftDoor: {fileID: 0}
-  m_RightDoor: {fileID: 0}
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
@@ -23085,7 +23059,6 @@ MonoBehaviour:
   laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: 20, z: 0}
-  i: 0
 --- !u!1 &968283067
 GameObject:
   m_ObjectHideFlags: 0
@@ -24265,7 +24238,6 @@ MonoBehaviour:
   laserPointer: {fileID: 0}
   particleSystem: {fileID: 0}
   myLight: {fileID: 0}
-  myActivateLight: {fileID: 0}
 --- !u!1 &1319305590
 GameObject:
   m_ObjectHideFlags: 0
@@ -24984,8 +24956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c590298deaa444bd50d51e2262bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tf: {fileID: 0}
-  isOpen: 0
   DoorShaft: {fileID: 1353057546}
 --- !u!1 &1391153826
 GameObject:
@@ -25118,8 +25088,18 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 189529510}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp, m_MethodName: Open_green, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 189529510}
+        m_TargetAssemblyTypeName: XLine_Test
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TagFilter: 
 --- !u!65 &1423900694
 BoxCollider:
@@ -25346,7 +25326,6 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   TagFilter: 
 --- !u!54 &1572150697
 Rigidbody:
@@ -25480,8 +25459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01c590298deaa444bd50d51e2262bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tf: {fileID: 0}
-  isOpen: 0
   DoorShaft: {fileID: 1674775299}
 --- !u!1 &1723461117
 GameObject:
@@ -44783,7 +44760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 0}
   FXef: {fileID: 0}
-  laser: 0
 --- !u!1 &1741934353
 GameObject:
   m_ObjectHideFlags: 0
@@ -45417,8 +45393,18 @@ MonoBehaviour:
   EffectToDo:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 189529510}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp, m_MethodName: Open_blue, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 189529510}
+        m_TargetAssemblyTypeName: XLine_Test
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TagFilter: 
 --- !u!65 &2004063081
 BoxCollider:
@@ -45459,7 +45445,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041422634}
-  m_LocalRotation: {x: -0.0127883265, y: 0.0032225437, z: 0.00056812004, w: 0.9999129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.059585, y: 1.3576819, z: -8.966734}
   m_LocalScale: {x: 0.02, y: 0.01, z: 0.02}
   m_ConstrainProportionsScale: 0
@@ -45532,11 +45518,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Line: {fileID: 451992134}
   FXef: {fileID: 451992140}
-  closed: 1
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  m_LeftDoor: {fileID: 0}
-  m_RightDoor: {fileID: 0}
   LeftDoorShaft: {fileID: 1353057546}
   RightDoorShaft: {fileID: 1674775299}
   Collider: {fileID: 1797602201}
@@ -45546,7 +45529,6 @@ MonoBehaviour:
   laser: 0
   timeAnim: 1
   goalOffset: {x: 0, y: -20, z: 0}
-  i: 0
 --- !u!54 &2111298840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48682,11 +48664,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 1319288701}
-  EffectToDo:
+  EffectToDo1:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 938846313}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp, m_MethodName: DoEffectStatues, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
+  EffectToDo2:
+    m_PersistentCalls:
+      m_Calls: []
+  EffectToDo3:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &6415121182892048218
 Transform:
   m_ObjectHideFlags: 0
@@ -49310,11 +49296,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 1319288701}
-  EffectToDo:
+  EffectToDo1:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 2041422641}, m_TargetAssemblyTypeName: XLine_Test, Assembly-CSharp, m_MethodName: DoEffectStatues, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
+  EffectToDo2:
+    m_PersistentCalls:
+      m_Calls: []
+  EffectToDo3:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &7359001827231958148
 MeshRenderer:
   m_ObjectHideFlags: 0

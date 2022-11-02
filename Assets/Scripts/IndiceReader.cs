@@ -29,28 +29,28 @@ public class IndiceReader : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.name == "room0")
+        if (other.name == "Room0")
         {
             print("enter Abondance");
             //EffectToDo?.Invoke();
             _roomNum = 0;
             print(_roomNum);
         }
-        else if (other.name == "room1")
+        else if (other.name == "Room1")
         {
             print("enter Diane");
             //EffectToDo?.Invoke();
             _roomNum = 1;
             print(_roomNum);
         }
-        else if (other.name == "room2")
+        else if (other.name == "Room2")
         {
             print("enter Diane");
             //EffectToDo?.Invoke();
             _roomNum = 2;
             print(_roomNum);
         }
-        else if (other.name == "room3")
+        else if (other.name == "Room3")
         {
             print("enter Diane");
             //EffectToDo?.Invoke();
