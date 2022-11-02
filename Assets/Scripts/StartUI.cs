@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Valve.VR.Extras;
 
 public class StartUI : MonoBehaviour
@@ -12,6 +13,8 @@ public class StartUI : MonoBehaviour
     public SteamVR_LaserPointer laserPointer;
     public Image _StartImage;
     public Image _GOImage;
+    public TMPro.TextMeshProUGUI _RestartImage;
+
     // public GameObject _BvInterface;
     public GameObject _BvText;
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
@@ -27,14 +30,20 @@ public class StartUI : MonoBehaviour
 
     private void GameOver()
     {
-        if (_GOImage.enabled == false)
+        if (_GOImage.enabled == false && _RestartImage.enabled == false)
         {
             _GOImage.enabled = true;
+            _RestartImage.enabled = true;
         }
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
+        if (e.target.name == "RestartButton" && _RestartImage.enabled == true)
+        {
+            SceneManager.LoadScene(0);
+        }
+        
         if (e.target.name == "Plane_Start" && _StartImage.enabled == false)
         {
             Debug.Log("Plane_Start was clicked");

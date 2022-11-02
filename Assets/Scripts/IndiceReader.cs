@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
-// ajouter sous player
+// ajouter sous one collider of player
+
 public class IndiceReader : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
