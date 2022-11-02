@@ -24,7 +24,6 @@ namespace Valve.VR.Extras
         public event PointerEventHandler PointerOut;
         public event PointerEventHandler PointerClick;
 
-
         Transform previousContact = null;
 
 

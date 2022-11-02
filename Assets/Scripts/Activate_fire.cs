@@ -9,7 +9,7 @@ public class Activate_fire : MonoBehaviour
     public string TagFilter1;
     public string TagFilter2;
     public string TagFilter3;
-    public new ParticleSystem particleSystem;
+    public ParticleSystem particleSystem;
     bool candle1 = false;
     bool candle2 = false;
     bool candle3 = false;
@@ -26,21 +26,21 @@ public class Activate_fire : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) //OnTriggerExit OnTriggerEnter
     {
-        if (other.name == TagFilter1)
+        if (other.CompareTag(TagFilter1))
         {
             print(this.name + " declenché par " + this.gameObject);
             candle1 = true;
             print(TagFilter1 + candle1);
             Activate();
         }
-        else if (other.name == TagFilter2)
+        else if(other.CompareTag(TagFilter2))
         {
             print(this.name + " declenché par " + this.gameObject);
             candle2 = true;
             print(TagFilter2 + candle2);
             Activate();
         }
-        else if (other.name == TagFilter3)
+        else if (other.CompareTag(TagFilter3))
         {
             print(this.name + " declenché par " + this.gameObject);
             candle3 = true;

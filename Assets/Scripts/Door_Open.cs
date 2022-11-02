@@ -55,7 +55,6 @@ public class Door_Open : MonoBehaviour
                 Destroy(Collider);
 
                 music.clip = Open_door;
-                print(music.clip);
                 music.Play();
 
                 
