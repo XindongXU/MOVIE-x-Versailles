@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
-
-
+using Unity.VisualScripting;
 
 public class XLine_Test : MonoBehaviour
 {
@@ -19,6 +17,8 @@ public class XLine_Test : MonoBehaviour
     public GameObject LeftDoorShaft;
     public GameObject RightDoorShaft;
     public GameObject Collider;
+    public GameObject DiamandBleu;
+    public GameObject DiamandVert;
 
     bool Door_open_green;
     bool Door_open_blue;
@@ -84,6 +84,7 @@ public class XLine_Test : MonoBehaviour
 
     public void Open_blue()
     {
+        
         Door_open_blue = true;
         Debug.Log("le diamand bleu est en mode" + Door_open_blue);
     }
@@ -101,6 +102,8 @@ public class XLine_Test : MonoBehaviour
     {
         m_LeftDoor = LeftDoorShaft.GetComponent<Door>();
         m_RightDoor = RightDoorShaft.GetComponent<Door>();
+        Door_open_green = DiamandVert.GetComponent<Diamond_variable>().Door_open;
+        Door_open_blue = DiamandBleu.GetComponent<Diamond_variable>().Door_open;
 
         Door_open_blue = false;
         Door_open_blue = false;
