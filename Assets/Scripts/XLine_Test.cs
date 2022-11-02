@@ -8,7 +8,6 @@ public class XLine_Test : MonoBehaviour {
 	public GameObject Line;
 	public GameObject FXef;//Effet de particules du laser frappant l'objet
 
-	public bool laser = false;
 
     bool closed = true;
     public AudioSource music;
@@ -21,8 +20,9 @@ public class XLine_Test : MonoBehaviour {
 
     public bool Door_open_green = false;
     public bool Door_open_blue = false;
+    public bool Door_statues = false;
+    public bool laser = false;
 
-    // public bool position_statues = false;
     public float timeAnim = 1;
     public Vector3 goalOffset = Vector3.zero;
 
@@ -30,7 +30,7 @@ public class XLine_Test : MonoBehaviour {
     {
         StartCoroutine(AnimationRoutine());
     }
-
+    int i = 0;
     public IEnumerator AnimationRoutine()
     {
         Vector3 Vector3Speed = goalOffset / timeAnim;
@@ -38,14 +38,19 @@ public class XLine_Test : MonoBehaviour {
         for (float timer = 0; timer <= timeAnim; timer += Time.deltaTime)
         {
             this.transform.Rotate(Vector3Speed * Time.deltaTime);
-            //this.transform.DORotate(Vector3Speed, 1).SetEase(Ease.InElastic);
-            // Attendre la prochaine frame physique (dans Time.deltaTime sec)
+            i += 1;
+            if (i%36==2)
+            {
+                Door_statues = true;
+            }
+            Debug.Log(i);
             yield return null;
         }
     }
 
     public void DoEffect()
     {
+    
     
 
     // Use this for initialization
@@ -69,7 +74,6 @@ public class XLine_Test : MonoBehaviour {
 		}
 			
 		Line.transform.localScale=Sc;
-        print(this.name + " declench?par " + this.gameObject + this.laser);
         laser = true;
 	}
 
@@ -83,6 +87,7 @@ public class XLine_Test : MonoBehaviour {
     {
         Door_open_blue = true;
     }
+
     
     private void Awake()
     {
@@ -100,17 +105,18 @@ public class XLine_Test : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   if (closed & laser)
+    {   if (closed & laser & Door_statues)
         {
             float LeftDoorShaftRotation = LeftDoorShaft.transform.localEulerAngles.y;
             float RightDoorShaftRotation = RightDoorShaft.transform.localEulerAngles.y;
             Debug.Log(LeftDoorShaftRotation);
             Debug.Log(closed);
+
             if ((LeftDoorShaftRotation >= 100) && (-180 <= RightDoorShaftRotation))
             {
                 closed = false;
             }
-            if (Door_open_green == true & Door_open_blue == true)
+            if (Door_open_green == true & Door_open_blue == true )
             {
                 Destroy(Collider);
 
