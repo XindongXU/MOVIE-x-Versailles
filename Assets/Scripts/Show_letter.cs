@@ -15,7 +15,7 @@ public class Show_letter : MonoBehaviour
     }
     public void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag(TagFilter))
+        if (other.name == TagFilter)
         {
             print(this.name + " declench¨¦ par " + this.gameObject);
             time += Time.deltaTime;
