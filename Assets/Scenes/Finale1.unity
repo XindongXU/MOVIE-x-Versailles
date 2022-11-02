@@ -389,8 +389,9 @@ GameObject:
   - component: {fileID: 24411115}
   - component: {fileID: 24411114}
   - component: {fileID: 24411113}
+  - component: {fileID: 24411117}
   m_Layer: 0
-  m_Name: Teleporting area
+  m_Name: Teleporting area0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,13 +404,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24411111}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 19.551498, y: 0.036394127, z: -0.04000002}
-  m_LocalScale: {x: 2.0020797, y: 2, z: 1.6337937}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.448501, y: 0.20143569, z: 40.7371}
+  m_LocalScale: {x: 2.0020797, y: 2, z: 1.6337942}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 795398500}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &24411113
 MonoBehaviour:
@@ -489,6 +490,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24411111}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &24411117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24411111}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &46939185
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +536,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 795398500}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &46939187
 MeshCollider:
@@ -1377,7 +1392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,7 +2294,6 @@ GameObject:
   m_Component:
   - component: {fileID: 608205503}
   - component: {fileID: 608205502}
-  - component: {fileID: 608205504}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -2295,7 +2309,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608205501}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6, y: 6, z: 6}
@@ -2313,36 +2327,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &608205504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608205501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86423f6bbb88e74ab2d1202548861a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1229250683}
-        m_TargetAssemblyTypeName: IndiceReader, Assembly-CSharp
-        m_MethodName: Roomnumber1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TagFilter: InWhichRoom
 --- !u!1001 &631023650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4470,70 +4456,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1 &1229250681
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1229250682}
-  - component: {fileID: 1229250684}
-  - component: {fileID: 1229250683}
-  m_Layer: 0
-  m_Name: InWhichRoom
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1229250682
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229250681}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.099999994, z: 0.1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1017368731}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1229250683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229250681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d4ffc61afacd4459838ecfec7c450a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPointer: {fileID: 160145497}
-  _indiceImage0: {fileID: 1771415308}
-  _indiceImage1: {fileID: 167135146}
-  _indiceImage2: {fileID: 1710831573}
-  _indiceImage3: {fileID: 957156330}
-  _buttonImage: {fileID: 115169231}
---- !u!65 &1229250684
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229250681}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1282004764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5036,7 +4958,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 795398500}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1402422787
 PrefabInstance:
@@ -5692,7 +5614,7 @@ GameObject:
   - component: {fileID: 1563262665}
   - component: {fileID: 1563262664}
   m_Layer: 0
-  m_Name: Teleporting area
+  m_Name: Teleporting area1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5789,7 +5711,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1648371112
 GameObject:
@@ -6061,7 +5983,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 795398500}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1658616832
 MeshCollider:
@@ -6137,7 +6059,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1666392217}
   - component: {fileID: 1666392216}
-  - component: {fileID: 1666392218}
   m_Layer: 0
   m_Name: Room2
   m_TagString: Untagged
@@ -6153,7 +6074,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666392215}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 8}
@@ -6171,36 +6092,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1666392218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666392215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86423f6bbb88e74ab2d1202548861a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1229250683}
-        m_TargetAssemblyTypeName: IndiceReader, Assembly-CSharp
-        m_MethodName: Roomnumber2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TagFilter: InWhichRoom
 --- !u!1001 &1690810550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7486,7 +7379,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1866932474}
   - component: {fileID: 1866932473}
-  - component: {fileID: 1866932475}
   m_Layer: 0
   m_Name: Room0
   m_TagString: Untagged
@@ -7502,7 +7394,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866932472}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 8}
@@ -7520,36 +7412,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1866932475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866932472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86423f6bbb88e74ab2d1202548861a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1229250683}
-        m_TargetAssemblyTypeName: IndiceReader, Assembly-CSharp
-        m_MethodName: Roomnumber0
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TagFilter: InWhichRoom
 --- !u!1 &1877931434
 GameObject:
   m_ObjectHideFlags: 0
@@ -7563,6 +7427,7 @@ GameObject:
   - component: {fileID: 1877931438}
   - component: {fileID: 1877931437}
   - component: {fileID: 1877931436}
+  - component: {fileID: 1877931440}
   m_Layer: 0
   m_Name: InWhichRoom
   m_TagString: Player
@@ -7583,7 +7448,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1017368731}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1877931436
 MonoBehaviour:
@@ -7598,6 +7463,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 160145497}
+  EffectToDo:
+    m_PersistentCalls:
+      m_Calls: []
   _indiceImage0: {fileID: 1771415308}
   _indiceImage1: {fileID: 167135146}
   _indiceImage2: {fileID: 1710831573}
@@ -7611,7 +7479,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877931434}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7666,6 +7534,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877931434}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1877931440
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877931434}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1950770310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7945,7 +7829,7 @@ GameObject:
   - component: {fileID: 1991882387}
   - component: {fileID: 1991882386}
   m_Layer: 0
-  m_Name: Teleporting area (1)
+  m_Name: Teleporting area2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8042,7 +7926,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062153635
 GameObject:
@@ -8054,7 +7938,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2062153637}
   - component: {fileID: 2062153636}
-  - component: {fileID: 2062153638}
   m_Layer: 0
   m_Name: Room3
   m_TagString: Untagged
@@ -8070,7 +7953,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062153635}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 8}
@@ -8088,36 +7971,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2062153638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062153635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86423f6bbb88e74ab2d1202548861a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectToDo:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1229250683}
-        m_TargetAssemblyTypeName: IndiceReader, Assembly-CSharp
-        m_MethodName: Roomnumber3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TagFilter: InWhichRoom
 --- !u!1 &2081545367
 GameObject:
   m_ObjectHideFlags: 0
