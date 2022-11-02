@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651b2965e7c1b545bce3a412a891423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
+  laserPointer: {fileID: 160145497}
   _noteImage: {fileID: 0}
   EffectToDo:
     m_PersistentCalls:
@@ -4403,12 +4403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d4ffc61afacd4459838ecfec7c450a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
-  _indiceImage0: {fileID: 0}
-  _indiceImage1: {fileID: 0}
-  _indiceImage2: {fileID: 0}
-  _indiceImage3: {fileID: 0}
-  _buttonImage: {fileID: 0}
 --- !u!65 &1229250684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7313,12 +7307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d4ffc61afacd4459838ecfec7c450a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPointer: {fileID: 0}
-  _indiceImage0: {fileID: 0}
-  _indiceImage1: {fileID: 0}
-  _indiceImage2: {fileID: 0}
-  _indiceImage3: {fileID: 0}
-  _buttonImage: {fileID: 0}
 --- !u!65 &1877931437
 BoxCollider:
   m_ObjectHideFlags: 0
