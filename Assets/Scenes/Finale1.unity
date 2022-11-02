@@ -5586,7 +5586,7 @@ GameObject:
   - component: {fileID: 1531610244}
   - component: {fileID: 1531610243}
   m_Layer: 5
-  m_Name: Panelending
+  m_Name: Panel_Ending
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5620,13 +5620,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531610241}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7993,6 +7993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TagFilter: lettermask
+  _EndImage: {fileID: 1531610243}
+  _EndingText: {fileID: 1790912936}
 --- !u!1 &2129939353
 GameObject:
   m_ObjectHideFlags: 0
