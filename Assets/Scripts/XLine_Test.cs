@@ -78,14 +78,14 @@ public class XLine_Test : MonoBehaviour
 
     public void Open_green()
     {
-        Door_open_green = true;
+        DiamandVert.GetComponent<Diamond_variable>().Door_open = true;
         Debug.Log("le diamand vert est en mode" + Door_open_green);
     }
 
     public void Open_blue()
     {
-        
-        Door_open_blue = true;
+
+        DiamandBleu.GetComponent<Diamond_variable>().Door_open = true;
         Debug.Log("le diamand bleu est en mode" + Door_open_blue);
     }
 
@@ -102,11 +102,11 @@ public class XLine_Test : MonoBehaviour
     {
         m_LeftDoor = LeftDoorShaft.GetComponent<Door>();
         m_RightDoor = RightDoorShaft.GetComponent<Door>();
-        Door_open_green = DiamandVert.GetComponent<Diamond_variable>().Door_open;
-        Door_open_blue = DiamandBleu.GetComponent<Diamond_variable>().Door_open;
+        //Door_open_green = DiamandVert.GetComponent<Diamond_variable>().Door_open;
+        //Door_open_blue = DiamandBleu.GetComponent<Diamond_variable>().Door_open;
 
-        Door_open_blue = false;
-        Door_open_blue = false;
+        //Door_open_blue = false;
+        //Door_open_blue = false;
 
 
     }
@@ -135,15 +135,15 @@ public class XLine_Test : MonoBehaviour
 
             Debug.Log("statue =" + Door_statues);
             Debug.Log("laqer =" + laser);
-            Debug.Log("vert=" + Door_open_green);
-            Debug.Log("bleu=" + Door_open_blue);
+            Debug.Log("vert=" + DiamandVert.GetComponent<Diamond_variable>().Door_open);
+            Debug.Log("bleu=" + DiamandBleu.GetComponent<Diamond_variable>().Door_open);
 
-            if (Door_open_green == true && Door_open_blue == true && Door_statues == true)
+            if (DiamandVert.GetComponent<Diamond_variable>().Door_open == true && DiamandBleu.GetComponent<Diamond_variable>().Door_open == true && Door_statues == true)
             {
                 Debug.Log("statue =" + Door_statues);
                 Debug.Log("laqer ="+ laser);
-                Debug.Log("vert="+ Door_open_green);
-                Debug.Log("bleu="+ Door_open_blue);
+                //Debug.Log("vert="+ Door_open_green);
+                //Debug.Log("bleu="+ Door_open_blue);
 
                 Destroy(Collider);
 
