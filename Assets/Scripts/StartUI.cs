@@ -82,12 +82,12 @@ public class StartUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // _IsGameStarted = true;
+        //_IsGameStarted = true;
         if (_IsGameStarted == true)
         {
             if (_BvText.GetComponent<Transform>().position.y <= 5)
             {
-                _BvText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/4, 0));
+                _BvText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/8, 0));
                 Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
             }
             else if (_StartImage.enabled == true)

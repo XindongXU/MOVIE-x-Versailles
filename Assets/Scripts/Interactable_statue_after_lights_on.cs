@@ -25,7 +25,7 @@ public class Interactable_statue_after_lights_on : MonoBehaviour
         if (myActivateLight.enabled == true)
         {
             busteRigidbody.constraints = RigidbodyConstraints.None;
-            buste.GetComponent<Interactable>().enabled = true;
+            //buste.GetComponent<Interactable>().enabled = true;
             //buste.AddComponent<Throwable>();
         }
     }

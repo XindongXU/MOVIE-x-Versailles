@@ -17,7 +17,7 @@ public class Is_successful : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _IsSuccessful = false;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -52,11 +52,13 @@ public class Is_successful : MonoBehaviour
         {
             if (_EndingText.GetComponent<Transform>().position.y <= 5)
             {
-                _EndingText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/4, 0));
+                _EndingText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/8, 0));
                 Debug.Log((int)_EndingText.GetComponent<Transform>().position.y);
             }
             else
             {
+                _IsSuccessful = false;
+                _EndImage.enabled = false;
                 Destroy(_Player);
                 SceneManager.LoadScene(0);
             }    
