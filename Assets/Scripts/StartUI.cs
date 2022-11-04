@@ -52,6 +52,7 @@ public class StartUI : MonoBehaviour
             Debug.Log("Plane_Start was clicked");
             Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
             _StartImage.enabled = true;
+            BvText.enabled = true;
             _IsGameStarted = true;
         }
         

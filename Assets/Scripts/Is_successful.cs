@@ -12,6 +12,7 @@ public class Is_successful : MonoBehaviour
     public Image _EndImage;
     public GameObject _EndingText;
     public GameObject _Player;
+    [SerializeField] TMPro.TextMeshProUGUI EndingText;
 
     bool _IsSuccessful = false;
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class Is_successful : MonoBehaviour
                 if (_EndImage.enabled == false)
                 {
                     _EndImage.enabled = true;
+                    EndingText.enabled = true;
                     Debug.Log((int)_EndingText.GetComponent<Transform>().position.y);
                 }
             }
@@ -59,6 +61,7 @@ public class Is_successful : MonoBehaviour
             {
                 _IsSuccessful = false;
                 _EndImage.enabled = false;
+                EndingText.enabled = false;
                 Destroy(_Player);
                 SceneManager.LoadScene(0);
             }    
