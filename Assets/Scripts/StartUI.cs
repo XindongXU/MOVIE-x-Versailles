@@ -103,41 +103,35 @@ public class StartUI : MonoBehaviour
     {
         if (_IsGameStarted == true)
         {
-            if (_BvText.GetComponent<Transform>().position.y <= 6)
+            if (_BvText.GetComponent<Transform>().position.y <= 10)
             {
                 _BvText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/4, 0));
                 Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
-                // test
-                // from -45 to 75;
-                // duration : 120 deltaTime;
-                // Destroy(_BvInterface, 10.0f);
             }
             else if (_StartImage.enabled == true)
             {
                 _StartImage.enabled = false;
+                // destroy tout;
+                // Destroy(_StartImage);
+                Destroy(_BvText);
             }
             else if (currentTime >= 0)
             {
                 currentTime -= 1 * Time.deltaTime;
+                countdownText.color = Color.white;
                 countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
+                if (currentTime <= 30)
+                {
+                    countdownText.color = Color.red;
+                }
             }
 
-            if (currentTime <= 0)
+            if (currentTime < 0)
             {
+                _IsGameStarted = false;
                 GameOver();
             }
             
         }
-        // while(this.GetComponent<Transform>().position.y <= 75)
-        // {
-        //     transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
-        //     // from -45 to 75;
-        //     // duration : 120 deltaTime;
-        //     // Destroy(_BvInterface, 10.0f);
-        // }
-        // // Destroy(gameObject);
-        // Destroy(_BvInterface);
-        //transform.Translate(new Vector3(0, 1 * Time.deltaTime, 0));
-        //Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
     }
 }
