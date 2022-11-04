@@ -31772,9 +31772,9 @@ MonoBehaviour:
   statue: {fileID: 668258605}
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  LeftDoorShaft: {fileID: 1699560113}
-  RightDoorShaft: {fileID: 396607995}
-  Collider: {fileID: 1555228841}
+  LeftDoorShaft: {fileID: 459279901}
+  RightDoorShaft: {fileID: 652307561}
+  Collider: {fileID: 1298418543}
   DiamandBleu: {fileID: 1801054231}
   DiamandVert: {fileID: 895249209}
   timeAnim: 1
@@ -32893,9 +32893,9 @@ MonoBehaviour:
   statue: {fileID: 668258605}
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  LeftDoorShaft: {fileID: 1699560113}
-  RightDoorShaft: {fileID: 396607995}
-  Collider: {fileID: 1555228841}
+  LeftDoorShaft: {fileID: 459279901}
+  RightDoorShaft: {fileID: 652307561}
+  Collider: {fileID: 1298418543}
   DiamandBleu: {fileID: 1801054231}
   DiamandVert: {fileID: 895249209}
   timeAnim: 1
@@ -54507,9 +54507,9 @@ MonoBehaviour:
   statue: {fileID: 668258605}
   music: {fileID: 0}
   Open_door: {fileID: 8300000, guid: 8be4de5026fb7484ba693a5ae4df1a50, type: 3}
-  LeftDoorShaft: {fileID: 1699560113}
-  RightDoorShaft: {fileID: 396607995}
-  Collider: {fileID: 1555228841}
+  LeftDoorShaft: {fileID: 459279901}
+  RightDoorShaft: {fileID: 652307561}
+  Collider: {fileID: 1298418543}
   DiamandBleu: {fileID: 1801054231}
   DiamandVert: {fileID: 895249209}
   timeAnim: 1
