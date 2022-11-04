@@ -17,7 +17,9 @@ public class StartUI : MonoBehaviour
 
     // public GameObject _BvInterface;
     public GameObject _BvText;
+    public GameObject _Player;
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
+    [SerializeField] TMPro.TextMeshProUGUI BvText;
     bool _IsGameStarted = false;
 
     void Awake()
@@ -41,6 +43,7 @@ public class StartUI : MonoBehaviour
     {
         if (e.target.name == "RestartButton" && _RestartImage.enabled == true)
         {
+            Destroy(_Player);
             SceneManager.LoadScene(0);
         }
         
@@ -50,28 +53,6 @@ public class StartUI : MonoBehaviour
             Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
             _StartImage.enabled = true;
             _IsGameStarted = true;
-            // _buttonImage.enabled = true;
-
-            //while (_BvText.GetComponent<Transform>().position.y <= 5)
-            //{
-            //    _BvText.GetComponent<Transform>().Translate(new Vector3(0, 1 * Time.deltaTime, 0));
-            //    Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
-            //    // test
-            //    // from -45 to 75;
-            //    // duration : 120 deltaTime;
-            //    // Destroy(_BvInterface, 10.0f);
-            //}
-
-
-            // _StartImage.enabled = false;
-            // Destroy(_BvText);
-
-            //while (currentTime >= 0)
-            //{
-            //    currentTime -= 1 * Time.deltaTime;
-            //    countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
-            //}
-            //GameOver();
         }
         
     }
@@ -101,9 +82,10 @@ public class StartUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // _IsGameStarted = true;
         if (_IsGameStarted == true)
         {
-            if (_BvText.GetComponent<Transform>().position.y <= 7)
+            if (_BvText.GetComponent<Transform>().position.y <= 5)
             {
                 _BvText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/4, 0));
                 Debug.Log((int)_BvText.GetComponent<Transform>().position.y);
@@ -111,14 +93,12 @@ public class StartUI : MonoBehaviour
             else if (_StartImage.enabled == true)
             {
                 _StartImage.enabled = false;
-                // destroy tout;
-                // Destroy(_StartImage);
-                Destroy(_BvText);
+                BvText.enabled = false;
             }
             else if (currentTime >= 0)
             {
                 currentTime -= 1 * Time.deltaTime;
-                countdownText.color = Color.white;
+                // countdownText.color = Color.white;
                 countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
                 if (currentTime <= 30)
                 {

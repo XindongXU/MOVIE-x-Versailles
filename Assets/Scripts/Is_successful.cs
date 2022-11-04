@@ -11,6 +11,7 @@ public class Is_successful : MonoBehaviour
     public string TagFilter;
     public Image _EndImage;
     public GameObject _EndingText;
+    public GameObject _Player;
 
     bool _IsSuccessful = false;
     // Start is called before the first frame update
@@ -49,11 +50,16 @@ public class Is_successful : MonoBehaviour
     {
         if (_IsSuccessful == true)
         {
-            if (_EndingText.GetComponent<Transform>().position.y <= 6)
+            if (_EndingText.GetComponent<Transform>().position.y <= 5)
             {
                 _EndingText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime/4, 0));
                 Debug.Log((int)_EndingText.GetComponent<Transform>().position.y);
             }
+            else
+            {
+                Destroy(_Player);
+                SceneManager.LoadScene(0);
+            }    
         
         }
     }
