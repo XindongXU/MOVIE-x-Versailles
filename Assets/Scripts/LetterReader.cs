@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
+using UnityEngine.Events;
 
 public class LetterReader : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
     [SerializeField]
     private Image _noteImage;
+    public UnityEvent EffectToDo;
 
     void Awake()
     {
@@ -25,12 +27,14 @@ public class LetterReader : MonoBehaviour
         {
             Debug.Log("Lettre was clicked");
             _noteImage.enabled = false;
+            EffectToDo?.Invoke();
 
         }
         else if (e.target.name == "Plane_Lettre" && _noteImage.enabled == false)
         {
             Debug.Log("Plane was clicked");
             _noteImage.enabled = true;
+            EffectToDo?.Invoke();
 
         }
     }

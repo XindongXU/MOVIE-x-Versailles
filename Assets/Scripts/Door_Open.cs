@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class Door_Open : MonoBehaviour
@@ -13,7 +14,7 @@ public class Door_Open : MonoBehaviour
     public GameObject LeftDoorShaft;
     public GameObject RightDoorShaft;
     public GameObject Collider;
-
+    public UnityEvent EffectToDo;
 
     bool Door_open = false;
 
@@ -56,8 +57,9 @@ public class Door_Open : MonoBehaviour
 
                 music.clip = Open_door;
                 music.Play();
+                EffectToDo?.Invoke();
 
-                
+
                 m_LeftDoor.OpenLeftDoorMethod();
                 m_RightDoor.OpenRightDoorMethod();
 

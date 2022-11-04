@@ -23,7 +23,7 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Bouton1")
+        if (e.target.name == "Cube")
         {
             Debug.Log("Cube1 was clicked");
             particleSystem.Play();

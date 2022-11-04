@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
+using UnityEngine.Events;
 // ajouter sous one collider of player
 
-public class IndiceReader : MonoBehaviour
+public class IndiceReader1 : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
-    //public UnityEvent EffectToDo;
+    public UnityEvent EffectToDo;
     // public string TagFilter;
     // [SerializeField]
     public Image _indiceImage0;
@@ -31,58 +32,58 @@ public class IndiceReader : MonoBehaviour
     //{
     //    if (other.name == "Room0")
     //    {
-    //        print("enter Hercule");
-    //        //EffectToDo?.Invoke();
+    //        Debug.Log("enter Hercule");
+    //        EffectToDo?.Invoke();
     //        _roomNum = 0;
-    //        print(_roomNum);
+    //        Debug.Log(_roomNum);
     //    }
     //    else if (other.name == "Room1")
     //    {
-    //        print("enter Abondance");
-    //        //EffectToDo?.Invoke();
+    //        Debug.Log("enter Abondance");
+    //        EffectToDo?.Invoke();
     //        _roomNum = 1;
-    //        print(_roomNum);
+    //        Debug.Log(_roomNum);
     //    }
     //    else if (other.name == "Room2")
     //    {
-    //        print("enter Venus");
-    //        //EffectToDo?.Invoke();
+    //        Debug.Log("enter Venus");
+    //        EffectToDo?.Invoke();
     //        _roomNum = 2;
-    //        print(_roomNum);
+    //        Debug.Log(_roomNum);
     //    }
     //    else if (other.name == "Room3")
     //    {
-    //        print("enter Diane");
-    //        //EffectToDo?.Invoke();
+    //        Debug.Log("enter Diane");
+    //        EffectToDo?.Invoke();
     //        _roomNum = 3;
-    //        print(_roomNum);
+    //        Debug.Log(_roomNum);
     //    }
 
     //}
 
-    public void Roomnumber0()
-    {
-        _roomNum = 0;
-        Debug.Log("roomnumber = " + _roomNum);
-    }
+    //public void Roomnumber0()
+    //{
+    //    _roomNum = 0;
+    //    Debug.Log("roomnumber = " + _roomNum);
+    //}
 
-    public void Roomnumber1()
-    {
-        _roomNum = 1;
-        Debug.Log("roomnumber = " + _roomNum);
-    }
+    //public void Roomnumber1()
+    //{
+    //    _roomNum = 1;
+    //    Debug.Log("roomnumber = " + _roomNum);
+    //}
 
-    public void Roomnumber2()
-    {
-        _roomNum = 2;
-        Debug.Log("roomnumber = " + _roomNum);
-    }
+    //public void Roomnumber2()
+    //{
+    //    _roomNum = 2;
+    //    Debug.Log("roomnumber = " + _roomNum);
+    //}
 
-    public void Roomnumber3()
-    {
-        _roomNum = 3;
-        Debug.Log("roomnumber = " + _roomNum);
-    }
+    //public void Roomnumber3()
+    //{
+    //    _roomNum = 3;
+    //    Debug.Log("roomnumber = " + _roomNum);
+    //}
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
@@ -178,6 +179,29 @@ public class IndiceReader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.transform.localPosition.z <= 50 && this.transform.localPosition.z >= 32)
+        {
+            Debug.Log("enter Hercule");
+            _roomNum = 0;
+            Debug.Log(_roomNum);
+        }
+        else if (this.transform.localPosition.z <= 32 && this.transform.localPosition.z >= 25)
+        {
+            Debug.Log("enter Abondance");
+            _roomNum = 1;
+            Debug.Log(_roomNum);
+        }
+        else if (this.transform.localPosition.z <= 25 && this.transform.localPosition.z >= 10)
+        {
+            Debug.Log("enter Venus");
+            _roomNum = 2;
+            Debug.Log(_roomNum);
+        }
+        else if (this.transform.localPosition.z <= 10 && this.transform.localPosition.z >= 0)
+        {
+            Debug.Log("enter Diane");
+            _roomNum = 3;
+            Debug.Log(_roomNum);
+        }
     }
 }
