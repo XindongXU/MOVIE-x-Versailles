@@ -17,10 +17,12 @@ public class Is_successful : MonoBehaviour
 
     bool _IsSuccessful = false;
     public string TagFilter;
+    public GameObject Table;
     // Start is called before the first frame update
     void Start()
     {
         _IsSuccessful = false;
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -53,7 +55,7 @@ public class Is_successful : MonoBehaviour
     {
         //if (_IsSuccessful == false)
         //{
-        //    if ((_FinalProve.GetComponent<MeshRenderer>().material.color.a == 0) && (_FinalProve.transform.localPosition.z <= 40) && (_FinalProve.transform.localPosition.z >= 25))
+        //    if ((_FinalProve.GetComponent<MeshRenderer>().material.color.a == 0) && (_FinalProve.transform.localPosition.z <= 50) && (_FinalProve.transform.localPosition.z >= 25))
         //    {
         //        // XXD
         //        _IsSuccessful = true;
@@ -83,5 +85,21 @@ public class Is_successful : MonoBehaviour
         //    }    
         
         //}
+        if (_IsSuccessful == true)
+        {
+            if (_EndingText.GetComponent<Transform>().position.y <= 5)
+            {
+                _EndingText.GetComponent<Transform>().Translate(new Vector3(0, Time.deltaTime / 8, 0));
+                Debug.Log((int)_EndingText.GetComponent<Transform>().position.y);
+            }
+            else
+            {
+                _IsSuccessful = false;
+                _EndImage.enabled = false;
+                EndingText.enabled = false;
+                Destroy(_Player);
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 }

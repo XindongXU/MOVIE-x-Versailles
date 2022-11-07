@@ -10,11 +10,13 @@ public class Interactable_statue_after_lights_on : MonoBehaviour
     private Light myActivateLight;
     public GameObject buste;
     private Rigidbody busteRigidbody;
+    private bool isOn;
     // Start is called before the first frame update
     void Start()
     {
         myActivateLight = myLight.GetComponent<Light>();
         busteRigidbody = buste.GetComponent<Rigidbody>();
+        isOn = true;
         //busteRigidbody.isKinematic = false;
         //busteRigidbody.detectCollisions = true;
     }
@@ -24,9 +26,14 @@ public class Interactable_statue_after_lights_on : MonoBehaviour
     {
         if (myActivateLight.enabled == true)
         {
-            busteRigidbody.constraints = RigidbodyConstraints.None;
-            //buste.GetComponent<Interactable>().enabled = true;
-            //buste.AddComponent<Throwable>();
+            if (isOn == true)
+            {
+                busteRigidbody.constraints = RigidbodyConstraints.None;
+                buste.GetComponent<Interactable>().enabled = true;
+                buste.AddComponent<Throwable>();
+                isOn = false;
+            }
+            
         }
     }
 }
