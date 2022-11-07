@@ -101,7 +101,7 @@ public class StartUI : MonoBehaviour
                 currentTime -= 1 * Time.deltaTime;
                 // countdownText.color = Color.white;
                 countdownText.text = string.Format("{0:d2}:{1:d2}", (int)currentTime / 60, (int)currentTime % 60);
-                if (currentTime <= 30)
+                if (currentTime <= 59)
                 {
                     countdownText.color = Color.red;
                 }

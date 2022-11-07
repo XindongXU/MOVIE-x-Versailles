@@ -8,8 +8,9 @@ using Valve.VR.Extras;
 
 public class Is_successful : MonoBehaviour
 {
-    public string TagFilter;
+    //public string TagFilter;
     public Image _EndImage;
+    public GameObject _FinalProve;
     public GameObject _EndingText;
     public GameObject _Player;
     [SerializeField] TMPro.TextMeshProUGUI EndingText;
@@ -21,13 +22,37 @@ public class Is_successful : MonoBehaviour
         _IsSuccessful = false;
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.name == TagFilter)
-        {
-            print(this.name + " declench?par " + this.gameObject);
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.name == TagFilter)
+    //    {
+    //        print(this.name + " declench?par " + this.gameObject);
 
-            if (other.GetComponent<MeshRenderer>().material.color.a == 0)
+    //        if (other.GetComponent<MeshRenderer>().material.color.a == 0)
+    //        {
+    //            // XXD
+    //            _IsSuccessful = true;
+
+    //            if (_EndImage.enabled == false)
+    //            {
+    //                _EndImage.enabled = true;
+    //                EndingText.enabled = true;
+    //                Debug.Log((int)_EndingText.GetComponent<Transform>().position.y);
+    //            }
+    //        }
+    //    }
+    //    else
+    //    {
+    //        print(this.name + " a dt?une collision par un objet non autoris? seul les objets possant le tag : " + TagFilter + " sont autoris?");
+    //    }
+    //}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (_IsSuccessful == false)
+        {
+            if ((_FinalProve.GetComponent<MeshRenderer>().material.color.a == 0) && (_FinalProve.transform.localPosition.z <= 40) && (_FinalProve.transform.localPosition.z >= 25))
             {
                 // XXD
                 _IsSuccessful = true;
@@ -39,18 +64,8 @@ public class Is_successful : MonoBehaviour
                     Debug.Log((int)_EndingText.GetComponent<Transform>().position.y);
                 }
             }
-
         }
         else
-        {
-            print(this.name + " a dt?une collision par un objet non autoris? seul les objets possant le tag : " + TagFilter + " sont autoris?");
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (_IsSuccessful == true)
         {
             if (_EndingText.GetComponent<Transform>().position.y <= 5)
             {
