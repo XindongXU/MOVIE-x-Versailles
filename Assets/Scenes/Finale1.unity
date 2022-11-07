@@ -48916,7 +48916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648371112}
   m_LocalRotation: {x: 0, y: 0.25881907, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 1.419, y: 0.65999997, z: -6.778}
+  m_LocalPosition: {x: 1.419, y: 0.901, z: -6.778}
   m_LocalScale: {x: 0.5, y: 0.002, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49071,7 +49071,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 20, z: 1}
+  m_Size: {x: 1, y: 30, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
 --- !u!23 &1648371119
 MeshRenderer:
@@ -50750,10 +50750,12 @@ MonoBehaviour:
     le colonel pendant son s\xE9jour \xE0 Versailles, il y a donc entrepos\xE9 tous
     ses documents. En ce moment, ce dernier est \xE0 la messe, vous avez donc 20
     minutes avant qu\u2019il ne sorte de l\u2019\xE9glise et qu\u2019il puisse mettre
-    son plan \xE0 ex\xE9cution pour renverser la Normandie. Vous pouvez commencer
-    par chercher au niveau du tableau sur votre gauche, un valet m\u2019a dit qu\u2019il
-    l\u2019avait vu toucher un peu \xE0 l'\u0153uvre d\u2019art.\r\n\r\nJe compte
-    sur vous. Le royaume compte sur vous"
+    son plan \xE0 ex\xE9cution pour renverser la Normandie. Une fois que vous aurez
+    trouv\xE9 les preuves, vous devrez revenir ici et vous \xE9chapper de la pi\xE8ce
+    avant qu'il ne revienne. Vous pouvez commencer par chercher au niveau du tableau
+    sur votre gauche, un valet m\u2019a dit qu\u2019il l\u2019avait vu toucher un
+    peu \xE0 l'\u0153uvre d\u2019art.\r\n\r\nJe compte sur vous. Le royaume compte
+    sur vous"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
